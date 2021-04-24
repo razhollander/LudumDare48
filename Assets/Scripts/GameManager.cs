@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    //public queen
+    public GameObject queen;
     //public ants manager
     //pubilc enemies manager
     //public food manager
