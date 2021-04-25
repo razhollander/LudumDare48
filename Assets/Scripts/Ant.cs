@@ -130,9 +130,12 @@ public class Ant : OverridableMonoBehaviour, ISelectable
         }
     }
 
+    [ContextMenu("DIE")]
     private void Die()
     {
-        _bloodParticle.Play();
+        var blood = GameObject.Instantiate(_bloodParticle.gameObject);
+        blood.transform.position = _transform.position;
+        blood.SetActive(true);
         gameObject.SetActive(false);
     }
 
