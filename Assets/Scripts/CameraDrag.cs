@@ -12,7 +12,7 @@ public class CameraDrag : MonoBehaviour
     void Update()
     {
         float zoom = Input.GetAxisRaw("Mouse ScrollWheel");
-        Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize += zoom * 5;
+        Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize += zoom * -5;
         Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 
                 Mathf.Clamp(Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize,3,7);
 
