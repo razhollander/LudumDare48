@@ -40,8 +40,12 @@ public class global_selection : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             p1 = Input.mousePosition;
+            Ray ray = Camera.main.ScreenPointToRay(p1);
 
-            selected_table.DoTask(Camera.main.ScreenPointToRay(p1).origin.ToVector2());
+            if (Physics.Raycast(ray, out hit, 50000.0f))
+            {
+                selected_table.DoTask(hit.point.ToVector2_Y());
+            }
         }
 
         //2. while left mouse button held

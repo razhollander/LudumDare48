@@ -8,7 +8,8 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     private float _outlineWidth = 2;
     [SerializeField]
     private float _speed;
-
+    [SerializeField]
+    private float _destCircleRadios=1;
     private Material _material;
     public static readonly int OUTLINE_WIDTH = Shader.PropertyToID("_Thickness");
     public static readonly int OUTLINE_ENABLED = Shader.PropertyToID("_OutlineEnabled");
@@ -49,7 +50,9 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     public void DoSelectedTask(Vector2 point)
     {
         Debug.Log("Do task "+point);
-        _destPoint = point;
+
+        _destPoint = point + Random.insideUnitCircle * _destCircleRadios;
+        Debug.DrawLine(transform.position, _destPoint, Color.blue, 5);
         _isMoving = true;
     }
 
