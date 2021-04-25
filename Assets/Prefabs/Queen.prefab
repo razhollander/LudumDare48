@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7198323832054330535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -9.762, y: -9.762, z: 0}
+  m_LocalScale: {x: 0.046992928, y: 0.046992928, z: 0.046992928}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: cf63a3c33f6cd5140a15acb04f9a8fa6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,7 +98,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FoodAmountPerAnt: 1
   createAntsRadius: 1
+  foodAmount: 0
   health: 10
+  UI: {fileID: 0}
 --- !u!135 &1041480080348491056
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -110,7 +112,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &6337985641471301181
 Rigidbody:

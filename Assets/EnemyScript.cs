@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class EnemyScript : OverridableMonoBehaviour
 {
+    [SerializeField]
+    Canvas _healthCanvas;
     public int damage;
     public float startHealth;
     float health;
@@ -16,11 +18,12 @@ public class EnemyScript : OverridableMonoBehaviour
     Transform _transform;
     public Image HealthBar;
     bool isMoving = true;
-
+    
     protected override void Awake()
     {
         base.Awake();
         _transform = transform;
+         
     }
   
     private void OnEnable()
@@ -28,6 +31,7 @@ public class EnemyScript : OverridableMonoBehaviour
         isMoving = true;
         health = startHealth;
         HealthBar.fillAmount = health / startHealth;
+        _healthCanvas.gameObject.SetActive(false);
     }
 
     public void TakeDamage(float damage)
@@ -40,6 +44,8 @@ public class EnemyScript : OverridableMonoBehaviour
         {
             gameObject.SetActive(false);
         }
+
+        _healthCanvas.gameObject.SetActive(true);
     }
 
     public void SetDestination(Vector2 queenPos)
