@@ -29,7 +29,7 @@ public class CameraDrag : MonoBehaviour
         float zoom = Input.GetAxisRaw("Mouse ScrollWheel");
         Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize += zoom * -5;
         Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize =
-            Mathf.Clamp(Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize, 3, 7);
+            Mathf.Clamp(Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize, 4, 7);
 
       //  Vector3 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
       //  Camera.main.transform.position = Camera.main.transform.position + dir;
