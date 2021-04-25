@@ -155,12 +155,12 @@ SpriteRenderer:
   m_SortingLayerID: -44043743
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7419b4fa7eb16e744a8fff48af8302d0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 547bcaacd8b7c4241bbca124035f352e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 20.48, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -178,8 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60026cda094f26b43ae604cb7024607a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodCrumbSprite: {fileID: 0}
-  amount: 0
+  FoodCrumbSprite: {fileID: 21300000, guid: 1d799ad8594964a40a84db2afe89dbfa, type: 3}
   StartAmount: 30
   HealthBar: {fileID: 3721325892445618368}
 --- !u!222 &4989211993905323591
