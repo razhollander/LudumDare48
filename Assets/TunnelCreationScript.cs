@@ -14,7 +14,7 @@ public class TunnelCreationScript : MonoBehaviour
     [SerializeField]List<Vector2> positions;
 
     public bool dig = false;
-
+    public Transform digPoint;
     [SerializeField]float time = 0.1f;
     void Start()
     {
@@ -34,7 +34,7 @@ public class TunnelCreationScript : MonoBehaviour
             time -= Time.deltaTime;
             if (time <= 0)
             {
-                UpdateLine(transform.position);
+                UpdateLine(digPoint.position);
                 time = 0.1f;
             }
         }
