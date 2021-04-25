@@ -7,6 +7,8 @@ public class EnemyScript : OverridableMonoBehaviour
 {
     [SerializeField]
     Canvas _healthCanvas;
+    [SerializeField]
+    Animator _animator;
     public int damage;
     public float startHealth;
     float health;
@@ -23,7 +25,7 @@ public class EnemyScript : OverridableMonoBehaviour
     {
         base.Awake();
         _transform = transform;
-         
+        _animator.Play("EnemyWalking");
     }
   
     private void OnEnable()

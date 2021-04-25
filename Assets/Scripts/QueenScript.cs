@@ -28,12 +28,10 @@ public class QueenScript : MonoBehaviour
     public void Feed(int amount)
     {
         foodAmount += amount;
-        Debug.Log("amount: " + foodAmount + ", foodperant" + FoodAmountPerAnt);
         UI.UpdateFoodTxt(amount);
         var antsNumber = foodAmount / FoodAmountPerAnt;
         for (int i = 0; i < antsNumber; i++)
         {
-            Debug.Log("Create ANT");
             CreateAnt();
         }
     }
