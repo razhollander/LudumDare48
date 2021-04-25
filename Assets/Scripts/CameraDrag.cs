@@ -5,33 +5,7 @@ using Cinemachine;
 
 public class CameraDrag : MonoBehaviour
 {
-    public float dragSpeed = 2;
     private Vector3 dragOrigin;
-
-
-    //void Update()
-    //{
-    //    //float zoom = Input.GetAxisRaw("Mouse ScrollWheel");
-    //    //Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize += zoom * -5;
-    //    //Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 
-    //    //        Mathf.Clamp(Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize,3,7);
-
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-    //        dragOrigin = Input.mousePosition;
-    //        Camera.main.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y,-10) ;
-    //        return;
-    //    }
-
-    //    if (!Input.GetMouseButton(0)) return;
-
-    //    //Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
-    //    //Vector3 move = new Vector3(pos.x * dragSpeed, pos.y * dragSpeed, 0);
-
-    //    //transform.Translate(-move, Space.World);
-
-
-    //}
 
     public float offset;
     public float speed;
@@ -50,9 +24,13 @@ public class CameraDrag : MonoBehaviour
         cameraMove.y = transform.position.y;
         cameraMove.z = transform.position.z;
     }
-    // Update is called once per frame
     void Update()
     {
+        float zoom = Input.GetAxisRaw("Mouse ScrollWheel");
+        Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize += zoom * -5;
+        Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize =
+            Mathf.Clamp(Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize,3,7);
+
         //Move camera
         if ((Input.mousePosition.x > screenWidth - offset) && transform.position.x < minMaxXPosition.y)
         {
@@ -71,6 +49,8 @@ public class CameraDrag : MonoBehaviour
             cameraMove.y -= MoveSpeed();
         }
         transform.position = cameraMove;
+
+        
     }
     float MoveSpeed()
     {
@@ -78,3 +58,5 @@ public class CameraDrag : MonoBehaviour
     }
 
 }
+
+
