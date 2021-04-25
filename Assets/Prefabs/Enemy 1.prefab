@@ -292,6 +292,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialPoolSize: 10
+  updateWhenDisabled: 0
+  _healthCanvas: {fileID: 5511706910926441366}
   damage: 5
   startHealth: 10
   speed: 0.3
