@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class FoodScript : MonoBehaviour
 {
+    [SerializeField]
+    Canvas _healthCanvas;
+
     public Sprite FoodCrumbSprite;
     private int amount;
 
@@ -17,9 +20,15 @@ public class FoodScript : MonoBehaviour
         amount = (int)StartAmount;
     }
 
-  
+    private void OnEnable()
+    {
+        _healthCanvas.gameObject.SetActive(false);
+    }
+
     public void TakeFood(int takeAmount)
     {
+        _healthCanvas.gameObject.SetActive(true);
+
         amount = (int)Mathf.Clamp(amount, 0, StartAmount);
         amount -= takeAmount;
         HealthBar.fillAmount = amount / StartAmount;

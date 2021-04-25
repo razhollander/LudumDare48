@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class global_selection : MonoBehaviour
 {
+    [SerializeField]
+    Arrow _arrow;
     //id_dictionary id_table;
     selected_dictionary selected_table;
     RaycastHit hit;
@@ -31,6 +33,8 @@ public class global_selection : MonoBehaviour
        // id_table = GetComponent<id_dictionary>();
         selected_table = GetComponent<selected_dictionary>();
         dragSelect = false;
+        _arrow = Instantiate(_arrow);
+        _arrow.SetActiveFalse();
     }
 
     // Update is called once per frame
@@ -41,9 +45,13 @@ public class global_selection : MonoBehaviour
         {
             p1 = Input.mousePosition;
             Ray ray = Camera.main.ScreenPointToRay(p1);
-
+            
             if (Physics.Raycast(ray, out hit, 50000.0f))
             {
+                if (selected_table.HasSelected())
+                {
+                    _arrow.Click(hit.point.ToVector2_Y());
+                }
                 selected_table.DoTask(hit.point.ToVector2_Y());
             }
         }
