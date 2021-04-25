@@ -106,6 +106,12 @@ public class Ant : OverridableMonoBehaviour, ISelectable
             _isCarryingFood = false;
             SetDestination(_transform.position);
         }
+
+        if (other.tag == "Enemy")
+        {
+            other.GetComponent<EnemyScript>().TakeDamage(5);
+            Destroy(gameObject); // need to change
+        }
     }
 
 }
