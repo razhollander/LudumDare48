@@ -38,10 +38,9 @@ public class EnemyManager : MonoBehaviour
              //Debug.Log("random " + rndNum);
             if (rndNum <= curveTime)
             {
-                Debug.Log("curved " + curveTime);
                 int enemyNum = Random.Range(1, 4);
 
-                PooledMonobehaviour enemy;
+                EnemyScript enemy;
 
                 switch (enemyNum)
                 {
@@ -57,8 +56,8 @@ public class EnemyManager : MonoBehaviour
                 }
                    Vector2 posL = centerL + new Vector2(Random.Range(-sizeR.x/2, sizeR.x/2), Random.Range(-sizeR.y / 2, sizeR.y / 2));
                    Vector2 posR = centerR + new Vector2(Random.Range(-sizeL.x / 2, sizeL.x / 2), Random.Range(-sizeL.y / 2, sizeL.y / 2));
-            
-                 int num = Random.Range(0,2);
+
+                int num = Random.Range(0,2);
 
 
                 if (num == 1)
@@ -70,9 +69,10 @@ public class EnemyManager : MonoBehaviour
                 { 
                     enemy.GetComponent<Transform>().position = posR;
                 }
+                enemy.SetDestination(GameManager.instance.queen.transform.position.ToVector2_Y());
 
             }
-                time = Random.Range(minTime, maxTime);
+            time = Random.Range(minTime, maxTime);
 
         }
     }

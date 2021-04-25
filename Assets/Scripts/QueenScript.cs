@@ -38,6 +38,15 @@ public class QueenScript : MonoBehaviour
         }
     }
 
+    [ContextMenu("Create 500 ants")]
+    private void Create500Ants()
+    {
+        for (int i = 0; i < 500; i++)
+        {
+            CreateAnt();
+        }
+    }
+
     private void CreateAnt()
     {
         foodAmount -= FoodAmountPerAnt;
