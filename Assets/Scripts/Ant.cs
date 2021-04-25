@@ -74,9 +74,11 @@ public class Ant : OverridableMonoBehaviour, ISelectable
         if (_isMoving) 
         {
             _transform.position = Vector2.MoveTowards(_transform.position, _destPoint, _speed * Time.deltaTime);
+            GetComponent<TunnelCreationScript>().dig = true;
             if (_transform.position.x == _destPoint.x && _transform.position.y == _destPoint.y)
             {
-                _isMoving = false; 
+                _isMoving = false;
+                GetComponent<TunnelCreationScript>().dig = false;
             }
         }
     }

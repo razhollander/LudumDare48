@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6071654042279241216}
   - component: {fileID: 1792252330154890016}
   - component: {fileID: 2557671718617775331}
+  - component: {fileID: -3818320442736412145}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Untagged
@@ -72,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 6056c42cee5748e4f94a769ea552f18c, type: 3}
-  m_Color: {r: 0.2034542, g: 0.8980392, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8f32f3a59c3aa84489c48620ea250ca9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -113,3 +114,23 @@ MonoBehaviour:
   speed: 0.3
   MinAttackDistance: 1
   dis: 0
+--- !u!114 &-3818320442736412145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5478650283306138383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d790c35c5edc6a945a559b701ff40fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tunnelPrefab: {fileID: 6576218313410826406, guid: 75869e6919470cf44a4db27bc7d92f84,
+    type: 3}
+  currentLine: {fileID: 0}
+  tunnelSize: 2
+  _flag: 1
+  positions: []
+  dig: 1
+  time: 0.1

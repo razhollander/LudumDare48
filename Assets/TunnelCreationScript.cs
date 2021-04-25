@@ -6,30 +6,37 @@ public class TunnelCreationScript : MonoBehaviour
 {
     public GameObject tunnelPrefab;
     public GameObject currentLine;
+    [SerializeField] float tunnelSize = 0.5f;
     LineRenderer _lr;
     Ant ant;
-    bool _flag;
+    [SerializeField]bool _flag = true;
     Transform[] points;
-    List<Vector2> positions;
+    [SerializeField]List<Vector2> positions;
+
+    public bool dig = false;
+
+    [SerializeField]float time = 0.1f;
     void Start()
     {
-        _lr = tunnelPrefab.GetComponent<LineRenderer>();
-        ant = GetComponent<Ant>();
-        Instantiate(tunnelPrefab, transform.position,Quaternion.identity);
-   
+        _lr = tunnelPrefab.GetComponent<LineRenderer>();     
     }
 
     void Update()
     {
-        if (ant._isMoving && _flag)
+        if (dig && _flag)
         {
-            CreateLine();
             _flag = false;
+            CreateLine();
         }
 
-        if (ant._isMoving && _flag == false)
+        if (dig && _flag == false)
         {
-            UpdateLine(transform.position);
+            time -= Time.deltaTime;
+            if (time <= 0)
+            {
+                UpdateLine(transform.position);
+                time = 0.1f;
+            }
         }
     }
 
@@ -37,6 +44,7 @@ public class TunnelCreationScript : MonoBehaviour
     {
         currentLine = Instantiate(tunnelPrefab, Vector2.zero, Quaternion.identity) ;
         _lr = currentLine.GetComponent<LineRenderer>();
+        _lr.widthMultiplier = tunnelSize;
         positions.Clear();
         positions.Add(transform.position);
         positions.Add(transform.position);
