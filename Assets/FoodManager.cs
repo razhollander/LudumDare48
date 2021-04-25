@@ -20,24 +20,20 @@ public class FoodManager : MonoBehaviour
             Vector2 randomPos = new Vector2(Random.Range(Xmin.position.x,Xmax.position.x), Random.Range(Ymin.position.y, Ymax.position.y));
            
             float dis = Vector2.Distance(randomPos, transform.position);
-            //Debug.Log(dis);
             if (dis > disToLayer1 && dis < disToLayer2)
             {
-               // Debug.Log("layer 1");
                 int rnd = Random.Range(0, firstLayer.Length);
                 Instantiate(firstLayer[rnd], randomPos, Quaternion.identity, holder.transform);
             }
 
             else if (dis > disToLayer2 && dis < disToLayer3)
             {
-              //  Debug.Log("layer 2");
                 int rnd = Random.Range(0, secondLayer.Length);
                 Instantiate(secondLayer[rnd], randomPos, Quaternion.identity, holder.transform);
             }
 
             else if (dis > disToLayer3)
             {
-               // Debug.Log("layer 3");
                 int rnd = Random.Range(0, thirdLayer.Length);
                 Instantiate(thirdLayer[rnd], randomPos, Quaternion.identity, holder.transform);
             }
@@ -48,7 +44,7 @@ public class FoodManager : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Debug.DrawLine(Ymin.position, Ymax.position,Color.green);
-        Debug.DrawLine(Xmin.position, Xmax.position,Color.green);
+        //Debug.DrawLine(Ymin.position, Ymax.position,Color.green);
+        //Debug.DrawLine(Xmin.position, Xmax.position,Color.green);
     }
 }
