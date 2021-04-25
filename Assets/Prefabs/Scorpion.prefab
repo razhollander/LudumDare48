@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 2557671718617775331}
   - component: {fileID: -5556268168541954043}
   - component: {fileID: 1717251173089799127}
+  - component: {fileID: 2176442534986376141}
   m_Layer: 0
   m_Name: Scorpion
   m_TagString: Enemy
@@ -244,6 +245,7 @@ MonoBehaviour:
   initialPoolSize: 10
   updateWhenDisabled: 0
   _healthCanvas: {fileID: 6501492460996054997}
+  _animator: {fileID: 0}
   damage: 0
   startHealth: 10
   speed: 0.3
@@ -287,6 +289,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!95 &2176442534986376141
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5478650283306138383}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6729117065349269627
 GameObject:
   m_ObjectHideFlags: 0
