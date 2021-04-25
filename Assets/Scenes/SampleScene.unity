@@ -284,10 +284,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1531989670206220076, guid: 96c62f65af51f144fa6b7e3db54b91e5,
+        type: 3}
+      propertyPath: tunnel
+      value: 
+      objectReference: {fileID: 6576218313410826406, guid: 75869e6919470cf44a4db27bc7d92f84,
+        type: 3}
     - target: {fileID: 5478650283306138382, guid: 96c62f65af51f144fa6b7e3db54b91e5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.82
+      value: -1.028
       objectReference: {fileID: 0}
     - target: {fileID: 5478650283306138382, guid: 96c62f65af51f144fa6b7e3db54b91e5,
         type: 3}

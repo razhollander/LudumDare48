@@ -14,7 +14,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     public static readonly int OUTLINE_WIDTH = Shader.PropertyToID("_Thickness");
     public static readonly int OUTLINE_ENABLED = Shader.PropertyToID("_OutlineEnabled");
     Vector2 _destPoint;
-    bool _isMoving = false;
+    public bool _isMoving = false;
     Transform _transform;
     bool _hasOutlineMetrial;
     SpriteRenderer _sprite;
