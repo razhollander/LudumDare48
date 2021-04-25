@@ -11,6 +11,7 @@ public class QueenScript : MonoBehaviour
     private int foodAmount = 0;
     public int health;
     private Transform _transform;
+    public UIScript UI;
 
     private void Awake()
     {
@@ -28,6 +29,7 @@ public class QueenScript : MonoBehaviour
     {
         foodAmount += amount;
         Debug.Log("amount: " + foodAmount + ", foodperant" + FoodAmountPerAnt);
+        UI.UpdateFoodTxt(foodAmount);
         var antsNumber = foodAmount / FoodAmountPerAnt;
         for (int i = 0; i < antsNumber; i++)
         {
@@ -41,6 +43,7 @@ public class QueenScript : MonoBehaviour
         foodAmount -= FoodAmountPerAnt;
         Vector2 creationPoint = _transform.position.ToVector2_Y() + Random.insideUnitCircle * createAntsRadius;
         GameManager.instance.antManager.AddAnt(creationPoint);
+        UI.UpdateAntsTxt(1);
     }
 
 }

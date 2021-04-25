@@ -9,7 +9,7 @@ public class FoodManager : MonoBehaviour
     public GameObject Food1, Food2, Food3;
     [SerializeField] int amount;
     public Transform Xmin, Xmax, Ymin,Ymax;
-
+    public GameObject holder;
     private void Start()
     {
         for (int i = 0; i < amount; i++)
@@ -18,17 +18,17 @@ public class FoodManager : MonoBehaviour
             Vector2 randomPos = new Vector2(Random.Range(Xmin.position.x,Xmax.position.x), Random.Range(Ymin.position.y, Ymax.position.y));
             if (num == 1)
             {
-                Instantiate(Food1,randomPos,Quaternion.identity);
+              Instantiate(Food1,randomPos,Quaternion.identity,holder.transform);
             }
 
             else if (num == 2)
             {
-                Instantiate(Food2, randomPos, Quaternion.identity);
+              Instantiate(Food2, randomPos, Quaternion.identity, holder.transform);
             }
 
             else if (num == 3)
             {
-                Instantiate(Food3, randomPos, Quaternion.identity);
+              Instantiate(Food3, randomPos, Quaternion.identity, holder.transform);
             }
         }
 

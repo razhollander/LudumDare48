@@ -1,18 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UIScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public TextMeshProUGUI antsTxt;
+    public TextMeshProUGUI foodTxt;
+    int food;
+    int ants = 2;
+    public void UpdateAntsTxt(int number)
     {
-        
+        ants += number;
+        antsTxt.text = ants.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void UpdateFoodTxt(int number)
+    {       
+        food += number;
+        foodTxt.text = food.ToString();
     }
 }

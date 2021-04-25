@@ -35,7 +35,7 @@ public class EnemyManager : MonoBehaviour
         if (time <= 0)
         {
             float rndNum = Random.Range(0f, 1f);
-             Debug.Log("random " + rndNum);
+             //Debug.Log("random " + rndNum);
             if (rndNum <= curveTime)
             {
                 Debug.Log("curved " + curveTime);

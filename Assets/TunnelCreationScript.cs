@@ -12,13 +12,14 @@ public class TunnelCreationScript : MonoBehaviour
     [SerializeField]bool _flag = true;
     Transform[] points;
     [SerializeField]List<Vector2> positions;
-
+    Transform holder;
     public bool dig = false;
     public Transform digPoint;
     [SerializeField]float time = 0.1f;
     void Start()
     {
-        _lr = tunnelPrefab.GetComponent<LineRenderer>();     
+        _lr = tunnelPrefab.GetComponent<LineRenderer>();
+        holder = GameObject.FindGameObjectWithTag("TunnelHolder").transform;
     }
 
     void Update()
@@ -42,7 +43,7 @@ public class TunnelCreationScript : MonoBehaviour
 
     public void CreateLine()
     {
-        currentLine = Instantiate(tunnelPrefab, Vector2.zero, Quaternion.identity) ;
+        currentLine = Instantiate(tunnelPrefab, Vector2.zero, Quaternion.identity,holder) ;
         _lr = currentLine.GetComponent<LineRenderer>();
         _lr.widthMultiplier = tunnelSize;
         positions.Clear();
