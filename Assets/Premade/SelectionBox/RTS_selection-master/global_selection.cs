@@ -94,7 +94,7 @@ public class global_selection : MonoBehaviour
                 {
                     Ray ray = Camera.main.ScreenPointToRay(corner);
 
-                    if (Physics.Raycast(ray, out hit, 50000.0f, (1 << 8)))
+                    if (Physics.Raycast(ray, out hit, 50000.0f))
                     {
                         verts[i] = new Vector3(hit.point.x, hit.point.y, hit.point.z);
                         vecs[i] = ray.origin - hit.point;
