@@ -27,6 +27,11 @@ public class selected_dictionary : MonoBehaviour
         }
     }
 
+    public bool HasSelected()
+    {
+        return selectedTable.Count > 0;
+    }
+
     public void deselect(int id)
     {
         if (selectedTable.ContainsKey(id))
