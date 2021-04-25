@@ -9,19 +9,29 @@ public class selected_dictionary : MonoBehaviour
     public void addSelected(GameObject go)
     {
         int id = go.GetInstanceID();
+        var selectable = go.GetComponent<ISelectable>();
 
-        if (!(selectedTable.ContainsKey(id)))
+        if (!selectedTable.ContainsKey(id) && selectable != null)
         {
             selectedTable.Add(id, go);
-            go.AddComponent<selection_component>();
+            selectable.Select();
             Debug.Log("Added " + id + " to selected dict");
         }
     }
 
     public void deselect(int id)
     {
-        Destroy(selectedTable[id].GetComponent<selection_component>());
-        selectedTable.Remove(id);
+        if (selectedTable.ContainsKey(id))
+        {
+            var selectable = selectedTable[id].GetComponent<ISelectable>();
+
+            if (selectable != null)
+            {
+                selectable.Deselect();
+            }
+
+            selectedTable.Remove(id);
+        }
     }
 
     public void deselectAll()
@@ -30,9 +40,15 @@ public class selected_dictionary : MonoBehaviour
         {
             if(pair.Value != null)
             {
-                Destroy(selectedTable[pair.Key].GetComponent<selection_component>());
+                var selectable = pair.Value.GetComponent<ISelectable>();
+
+                if (selectable != null)
+                {
+                    selectable.Deselect();
+                }
             }
         }
+
         selectedTable.Clear();
     }
 }

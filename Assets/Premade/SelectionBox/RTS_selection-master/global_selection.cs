@@ -40,6 +40,11 @@ public class global_selection : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             p1 = Input.mousePosition;
+            
+            //if(selected_dictionary.selectedTable.Count>0)
+            //{
+
+            //}
         }
 
         //2. while left mouse button held
