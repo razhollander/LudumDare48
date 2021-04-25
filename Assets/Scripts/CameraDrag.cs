@@ -14,7 +14,7 @@ public class CameraDrag : MonoBehaviour
     public Vector2 minMaxYPosition;
     private float screenWidth;
     private float screenHeight;
-    private Vector3 cameraMove;
+    public Vector3 cameraMove;
     // Use this for initialization
     void Start()
     {
@@ -29,33 +29,33 @@ public class CameraDrag : MonoBehaviour
         float zoom = Input.GetAxisRaw("Mouse ScrollWheel");
         Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize += zoom * -5;
         Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize =
-            Mathf.Clamp(Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize,3,7);
-
+            Mathf.Clamp(Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize, 3, 7);
+    }
         //Move camera
-        if ((Input.mousePosition.x > screenWidth - offset) && transform.position.x < minMaxXPosition.y)
-        {
-            cameraMove.x += MoveSpeed();
-        }
-        if ((Input.mousePosition.x < offset) && transform.position.x > minMaxXPosition.x)
-        {
-            cameraMove.x -= MoveSpeed();
-        }
-        if ((Input.mousePosition.y > screenHeight - offset) && transform.position.y < minMaxYPosition.y)
-        {
-            cameraMove.y += MoveSpeed();
-        }
-        if ((Input.mousePosition.y < offset) && transform.position.y > minMaxYPosition.x)
-        {
-            cameraMove.y -= MoveSpeed();
-        }
-        transform.position = cameraMove;
+    //    if ((Input.mousePosition.x > screenWidth - offset) && transform.position.x < minMaxXPosition.y)
+    //    {
+    //        cameraMove.x += MoveSpeed();
+    //    }
+    //    if ((Input.mousePosition.x < offset) && transform.position.x > minMaxXPosition.x)
+    //    {
+    //        cameraMove.x -= MoveSpeed();
+    //    }
+    //    if ((Input.mousePosition.y > screenHeight - offset) && transform.position.y < minMaxYPosition.y)
+    //    {
+    //        cameraMove.y += MoveSpeed();
+    //    }
+    //    if ((Input.mousePosition.y < offset) && transform.position.y > minMaxYPosition.x)
+    //    {
+    //        cameraMove.y -= MoveSpeed();
+    //    }
+    //    transform.position = cameraMove;
 
         
-    }
-    float MoveSpeed()
-    {
-        return speed * Time.deltaTime;
-    }
+    //}
+    //float MoveSpeed()
+    //{
+    //    return speed * Time.deltaTime;
+    //}
 
 }
 
