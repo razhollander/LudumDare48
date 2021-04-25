@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 2557671718617775331}
   - component: {fileID: -3818320442736412145}
   - component: {fileID: -68957184081405055}
+  - component: {fileID: 7044877856679675845}
   m_Layer: 0
   m_Name: Centapide
   m_TagString: Enemy
@@ -294,6 +295,7 @@ MonoBehaviour:
   initialPoolSize: 10
   updateWhenDisabled: 0
   _healthCanvas: {fileID: 5511706910926441366}
+  _animator: {fileID: 7044877856679675845}
   damage: 5
   startHealth: 10
   speed: 0.3
@@ -337,6 +339,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!95 &7044877856679675845
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5478650283306138383}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6246202274214007536
 GameObject:
   m_ObjectHideFlags: 0
