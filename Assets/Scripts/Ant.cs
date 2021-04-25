@@ -20,6 +20,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     bool _hasOutlineMetrial;
     SpriteRenderer _sprite;
     bool _isCarryingFood = false;
+
     protected override void Awake()
     {
         base.Awake();
@@ -92,6 +93,16 @@ public class Ant : OverridableMonoBehaviour, ISelectable
             _foodCrumbSpriteRenderer.sprite = food.FoodCrumbSprite;
             _isCarryingFood = true;
             SetDestination(GameManager.instance.queen.transform.position);
+        }
+
+        var queen = other.GetComponent<QueenScript>();
+
+        if (queen != null && _isCarryingFood)
+        {
+            queen.Feed(_foodCollectAmount);
+            _foodCrumbSpriteRenderer.sprite = null;
+            _isCarryingFood = false;
+            SetDestination(_transform.position);
         }
     }
 

@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class QueenScript : MonoBehaviour
 {
+    [SerializeField]
+    private int FoodAmountPerAnt = 10;
+    [SerializeField]
+    private float createAntsRadius = 1;
+    private int foodAmount = 0;
     public int health;
-    
+    private Transform _transform;
+
+    private void Awake()
+    {
+        _transform = transform;
+    }
     public void Die()
     {
         if (health <= 0)
@@ -13,4 +23,22 @@ public class QueenScript : MonoBehaviour
             //game over
         }
     }
+
+    public void Feed(int amount)
+    {
+        foodAmount += amount;
+        var antsNumber = foodAmount % FoodAmountPerAnt;
+        for (int i = 0; i < antsNumber; i++)
+        {
+            CreateAnt();
+        }
+    }
+
+    private void CreateAnt()
+    {
+        foodAmount -= FoodAmountPerAnt;
+        Vector2 creationPoint = _transform.position.ToVector2_Y() + Random.insideUnitCircle * createAntsRadius;
+        GameManager.instance.antManager.AddAnt(creationPoint);
+    }
+
 }
