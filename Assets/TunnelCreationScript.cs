@@ -4,24 +4,58 @@ using UnityEngine;
 
 public class TunnelCreationScript : MonoBehaviour
 {
-    public GameObject tunnel;
-    LineRenderer _lineRenderer;
+    public GameObject tunnelPrefab;
+    public GameObject currentLine;
+    [SerializeField] float tunnelSize = 0.5f;
+    LineRenderer _lr;
     Ant ant;
+    [SerializeField]bool _flag = true;
+    Transform[] points;
+    [SerializeField]List<Vector2> positions;
+
+    public bool dig = false;
+    public Transform digPoint;
+    [SerializeField]float time = 0.1f;
     void Start()
     {
-        _lineRenderer = tunnel.GetComponent<LineRenderer>();
-        ant = GetComponent<Ant>();
-        Instantiate(tunnel,transform.position,Quaternion.identity);
+        _lr = tunnelPrefab.GetComponent<LineRenderer>();     
     }
 
     void Update()
     {
-        if (ant._isMoving)
+        if (dig && _flag)
         {
-            int index = 0;
-            index++;
-          //  _lineRenderer.positionCount;
-            _lineRenderer.SetPosition(index, transform.position);
+            _flag = false;
+            CreateLine();
         }
+
+        if (dig && _flag == false)
+        {
+            time -= Time.deltaTime;
+            if (time <= 0)
+            {
+                UpdateLine(digPoint.position);
+                time = 0.1f;
+            }
+        }
+    }
+
+    public void CreateLine()
+    {
+        currentLine = Instantiate(tunnelPrefab, Vector2.zero, Quaternion.identity) ;
+        _lr = currentLine.GetComponent<LineRenderer>();
+        _lr.widthMultiplier = tunnelSize;
+        positions.Clear();
+        positions.Add(transform.position);
+        positions.Add(transform.position);
+        _lr.SetPosition(0,positions[0]);
+        _lr.SetPosition(1,positions[1]);
+    }
+
+    public void UpdateLine(Vector2 newPos)
+    {
+        positions.Add(newPos);
+        _lr.positionCount++;
+        _lr.SetPosition(_lr.positionCount - 1, newPos);
     }
 }

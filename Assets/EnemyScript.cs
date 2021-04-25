@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyScript : PooledMonobehaviour
 {
     GameObject queen;
 
     public int damage;
+    public float startHealth;
+    float health;
     public float speed;
     public float MinAttackDistance;
     public float dis;
 
     bool flipped = true;
     Transform _transform;
+    public Image HealthBar;
 
     private void Awake()
     {
@@ -21,10 +25,12 @@ public class EnemyScript : PooledMonobehaviour
     void Start()
     {
         queen = FindObjectOfType<QueenScript>().gameObject;
+        health = startHealth;
     }
      
     void Update()
     {
+        HealthBar.fillAmount = health / startHealth;
         float step = speed * Time.deltaTime;
         if (queen.transform.position.x > transform.position.x && flipped == true)
         {
@@ -37,8 +43,20 @@ public class EnemyScript : PooledMonobehaviour
             transform.Rotate(0, 180, 0);
             flipped = true;
         }
-        // Vector3 distance = Vector3.MoveTowards(transform.position,queen.transform.position,step);
+
+        if (health <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        health = (int)Mathf.Clamp(health, 0, startHealth);
+        HealthBar.fillAmount = health / startHealth;
+    }
+
 
     private void FixedUpdate()
     {
