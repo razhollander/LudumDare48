@@ -22,6 +22,11 @@ public class TunnelCreationScript : MonoBehaviour
         holder = GameObject.FindGameObjectWithTag("TunnelHolder").transform;
     }
 
+    private void OnDisable()
+    {
+        _flag = true;
+    }
+
     void Update()
     {
         if (dig && _flag)
