@@ -2944,7 +2944,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c125828d718ae418a06c0544aa577f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  time: 0
+  enemy1: {fileID: 2557671718617775331, guid: 8e53605868bc5bf42b165589fa40017f, type: 3}
+  enemy2: {fileID: 2557671718617775331, guid: 1097ef656755aa84699b1d109dd532ff, type: 3}
+  enemy3: {fileID: 2557671718617775331, guid: 4388431310a55ba46b31ba4a37e63eda, type: 3}
+  centerL: {x: -7.98, y: -6.99}
+  sizeR: {x: -4.83, y: 14.72}
+  centerR: {x: 8.13, y: -7}
+  sizeL: {x: 4.92, y: 15.64}
+  minTime: 1
+  maxTime: 3
 --- !u!1 &1457605837
 GameObject:
   m_ObjectHideFlags: 0
