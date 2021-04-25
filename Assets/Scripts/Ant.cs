@@ -17,7 +17,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     private SpriteRenderer _foodCrumbSpriteRenderer;
     private Material _material;
     public static readonly int OUTLINE_ENABLED = Shader.PropertyToID("_OutlineEnabled");
-
+   
     Vector2 _destPoint;
     public bool _isMoving = false;
     Transform _transform;
@@ -125,7 +125,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
         if (other.tag == "Enemy")
         {
             other.GetComponent<EnemyScript>().TakeDamage(5);
-            Destroy(gameObject); // need to change
+            gameObject.SetActive(false);
         }
     }
 
