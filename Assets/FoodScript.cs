@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class FoodScript : MonoBehaviour
 {
+    public Sprite FoodCrumbSprite;
     public int amount;
 
     public float StartAmount = 30;
