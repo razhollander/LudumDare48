@@ -92,7 +92,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _Thickness: 2
+    - _Thickness: 4
     - _TileMode: 0
     - _Weight: 0.224
     - _WorkflowMode: 1
