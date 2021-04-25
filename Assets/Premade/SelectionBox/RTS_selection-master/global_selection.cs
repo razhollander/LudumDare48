@@ -112,7 +112,7 @@ public class global_selection : MonoBehaviour
                     {
                         verts[i] = new Vector3(hit.point.x, hit.point.y, hit.point.z);
                         vecs[i] = ray.origin - hit.point;
-                        Debug.DrawLine(Camera.main.ScreenToWorldPoint(corner), hit.point, Color.red, 1.0f);
+                        //Debug.DrawLine(Camera.main.ScreenToWorldPoint(corner), hit.point, Color.red, 1.0f);
                     }
                     else
                     {

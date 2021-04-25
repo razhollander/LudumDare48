@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class selected_dictionary : MonoBehaviour
 {
     private Dictionary<int, ISelectable> selectedTable = new Dictionary<int, ISelectable>();
@@ -15,7 +14,6 @@ public class selected_dictionary : MonoBehaviour
         {
             selectedTable.Add(id, selectable);
             selectable.Select();
-            Debug.Log("Added " + id + " to selected dict");
         }
     }
 
