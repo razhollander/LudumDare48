@@ -1,12 +1,16 @@
 fileFormatVersion: 2
-guid: 7e76090124321d04398ee33c00cc92e5
+<<<<<<< HEAD:Assets/Art/item/MushroomCrumble.PNG.meta
+guid: 1d799ad8594964a40a84db2afe89dbfa
+=======
+guid: 699f0a85fa1ee8146b1fb47be149e084
+>>>>>>> e7505db76268eba0f1e3aa5e290c9959af3ca0a9:Assets/Art/background/background_dirtPattern2.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,10 +41,10 @@ TextureImporter:
     wrapU: 0
     wrapV: 0
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 3
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +53,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -61,7 +65,11 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
+<<<<<<< HEAD:Assets/Art/item/MushroomCrumble.PNG.meta
+    maxTextureSize: 256
+=======
     maxTextureSize: 8192
+>>>>>>> e7505db76268eba0f1e3aa5e290c9959af3ca0a9:Assets/Art/background/background_dirtPattern2.png.meta
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -73,7 +81,11 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+<<<<<<< HEAD:Assets/Art/item/MushroomCrumble.PNG.meta
+    maxTextureSize: 256
+=======
     maxTextureSize: 8192
+>>>>>>> e7505db76268eba0f1e3aa5e290c9959af3ca0a9:Assets/Art/background/background_dirtPattern2.png.meta
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -97,7 +109,11 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+<<<<<<< HEAD:Assets/Art/item/MushroomCrumble.PNG.meta
+    maxTextureSize: 256
+=======
     maxTextureSize: 8192
+>>>>>>> e7505db76268eba0f1e3aa5e290c9959af3ca0a9:Assets/Art/background/background_dirtPattern2.png.meta
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -119,13 +135,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+<<<<<<< HEAD:Assets/Art/item/MushroomCrumble.PNG.meta
+    maxTextureSize: 256
+=======
+    maxTextureSize: 8192
+>>>>>>> e7505db76268eba0f1e3aa5e290c9959af3ca0a9:Assets/Art/background/background_dirtPattern2.png.meta
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
