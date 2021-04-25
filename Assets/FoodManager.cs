@@ -6,7 +6,9 @@ public class FoodManager : MonoBehaviour
 {
     public int food;
 
-    public GameObject Food1, Food2, Food3;
+    //public GameObject Food1, Food2, Food3;
+    public GameObject[] firstLayer,secondLayer,thirdLayer;
+    [SerializeField] float disToLayer1, disToLayer2, disToLayer3;
     [SerializeField] int amount;
     public Transform Xmin, Xmax, Ymin,Ymax;
     public GameObject holder;
@@ -16,19 +18,28 @@ public class FoodManager : MonoBehaviour
         {
             int num = Random.Range(1, 4);
             Vector2 randomPos = new Vector2(Random.Range(Xmin.position.x,Xmax.position.x), Random.Range(Ymin.position.y, Ymax.position.y));
-            if (num == 1)
+           
+            float dis = Vector2.Distance(randomPos, transform.position);
+            //Debug.Log(dis);
+            if (dis > disToLayer1 && dis < disToLayer2)
             {
-              Instantiate(Food1,randomPos,Quaternion.identity,holder.transform);
+               // Debug.Log("layer 1");
+                int rnd = Random.Range(0, firstLayer.Length);
+                Instantiate(firstLayer[rnd], randomPos, Quaternion.identity, holder.transform);
             }
 
-            else if (num == 2)
+            else if (dis > disToLayer2 && dis < disToLayer3)
             {
-              Instantiate(Food2, randomPos, Quaternion.identity, holder.transform);
+              //  Debug.Log("layer 2");
+                int rnd = Random.Range(0, secondLayer.Length);
+                Instantiate(secondLayer[rnd], randomPos, Quaternion.identity, holder.transform);
             }
 
-            else if (num == 3)
+            else if (dis > disToLayer3)
             {
-              Instantiate(Food3, randomPos, Quaternion.identity, holder.transform);
+               // Debug.Log("layer 3");
+                int rnd = Random.Range(0, thirdLayer.Length);
+                Instantiate(thirdLayer[rnd], randomPos, Quaternion.identity, holder.transform);
             }
         }
 

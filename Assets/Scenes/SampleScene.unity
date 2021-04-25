@@ -1004,9 +1004,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   food: 0
-  Food1: {fileID: 5494717903950063262, guid: cb9ecebc7760aab49ba4ab31ebba98aa, type: 3}
-  Food2: {fileID: 5494717903950063262, guid: 27428dfb960821b4b908ecc7fccd88ff, type: 3}
-  Food3: {fileID: 5494717903950063262, guid: d859a6b5cb62c7b409329e0ab1c90d6b, type: 3}
+  firstLayer:
+  - {fileID: 5494717903950063262, guid: 27428dfb960821b4b908ecc7fccd88ff, type: 3}
+  - {fileID: 5494717903950063262, guid: 27428dfb960821b4b908ecc7fccd88ff, type: 3}
+  - {fileID: 5494717903950063262, guid: d859a6b5cb62c7b409329e0ab1c90d6b, type: 3}
+  secondLayer:
+  - {fileID: 5494717903950063262, guid: cb9ecebc7760aab49ba4ab31ebba98aa, type: 3}
+  - {fileID: 5494717903950063262, guid: 27428dfb960821b4b908ecc7fccd88ff, type: 3}
+  - {fileID: 5494717903950063262, guid: d859a6b5cb62c7b409329e0ab1c90d6b, type: 3}
+  thirdLayer:
+  - {fileID: 7198323832054330535, guid: f4014e87e0d0b5144aebe437859bd6f2, type: 3}
+  - {fileID: 5494717903950063262, guid: cb9ecebc7760aab49ba4ab31ebba98aa, type: 3}
+  - {fileID: 5494717903950063262, guid: cb9ecebc7760aab49ba4ab31ebba98aa, type: 3}
+  disToLayer1: 2
+  disToLayer2: 10
+  disToLayer3: 13
   amount: 30
   Xmin: {fileID: 304279686}
   Xmax: {fileID: 73720678}
@@ -1339,8 +1351,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.45528537
     - serializedVersion: 3
-      time: 0.24524146
-      value: 0.093707584
+      time: 0.21963722
+      value: 0.0035281405
       inSlope: -0.012943227
       outSlope: -0.012943227
       tangentMode: 0
@@ -1637,7 +1649,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1627663761
 GameObject:
@@ -2317,6 +2329,11 @@ PrefabInstance:
       propertyPath: UI
       value: 
       objectReference: {fileID: 1155481746}
+    - target: {fileID: -5229858109071951417, guid: f4014e87e0d0b5144aebe437859bd6f2,
+        type: 3}
+      propertyPath: FoodAmountPerAnt
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1267055713942076938, guid: f4014e87e0d0b5144aebe437859bd6f2,
         type: 3}
       propertyPath: m_SortingOrder
@@ -2360,7 +2377,7 @@ PrefabInstance:
     - target: {fileID: 4592197104961178010, guid: f4014e87e0d0b5144aebe437859bd6f2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4592197104961178010, guid: f4014e87e0d0b5144aebe437859bd6f2,
         type: 3}

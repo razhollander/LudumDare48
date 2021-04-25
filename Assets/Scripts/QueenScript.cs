@@ -8,7 +8,7 @@ public class QueenScript : MonoBehaviour
     private int FoodAmountPerAnt = 10;
     [SerializeField]
     private float createAntsRadius = 1;
-    private int foodAmount = 0;
+    [SerializeField]private int foodAmount = 0;
     public int health;
     private Transform _transform;
     public UIScript UI;
@@ -29,7 +29,7 @@ public class QueenScript : MonoBehaviour
     {
         foodAmount += amount;
         Debug.Log("amount: " + foodAmount + ", foodperant" + FoodAmountPerAnt);
-        UI.UpdateFoodTxt(foodAmount);
+        UI.UpdateFoodTxt(amount);
         var antsNumber = foodAmount / FoodAmountPerAnt;
         for (int i = 0; i < antsNumber; i++)
         {
@@ -50,6 +50,7 @@ public class QueenScript : MonoBehaviour
     private void CreateAnt()
     {
         foodAmount -= FoodAmountPerAnt;
+        UI.UpdateFoodTxt(-FoodAmountPerAnt);
         Vector2 creationPoint = _transform.position.ToVector2_Y() + Random.insideUnitCircle * createAntsRadius;
         GameManager.instance.antManager.AddAnt(creationPoint);
         UI.UpdateAntsTxt(1);

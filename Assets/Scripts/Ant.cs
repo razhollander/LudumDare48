@@ -97,7 +97,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("COLLIDE!");
+       // Debug.Log("COLLIDE!");
         var food = other.GetComponent<FoodScript>();
 
         if (food != null && !_isCarryingFood)
