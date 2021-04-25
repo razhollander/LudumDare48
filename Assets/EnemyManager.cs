@@ -32,12 +32,13 @@ public class EnemyManager : MonoBehaviour
     public void Spawn()
     {
         curveTime += Time.deltaTime /minutesToEndGraph;
-        float rndNum = Random.Range(0f, 1f);
         if (time <= 0)
         {
-            if (rndNum >= curveTime)
+            float rndNum = Random.Range(0f, 1f);
+             Debug.Log("random " + rndNum);
+            if (rndNum <= curveTime)
             {
-
+                Debug.Log("curved " + curveTime);
                 int enemyNum = Random.Range(1, 4);
 
                 PooledMonobehaviour enemy;
@@ -70,8 +71,8 @@ public class EnemyManager : MonoBehaviour
                     enemy.GetComponent<Transform>().position = posR;
                 }
 
-                time = Random.Range(minTime, maxTime);
             }
+                time = Random.Range(minTime, maxTime);
 
         }
     }
