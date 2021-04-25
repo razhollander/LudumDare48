@@ -6,7 +6,7 @@ public class FoodManager : MonoBehaviour
 {
     public int food;
 
-    public PooledMonobehaviour Food1, Food2, Food3;
+    public GameObject Food1, Food2, Food3;
     [SerializeField] int amount;
     public Transform Xmin, Xmax, Ymin,Ymax;
 

@@ -16,6 +16,7 @@ public class FoodScript : MonoBehaviour
         amount = (int)StartAmount;
     }
 
+  
     public void TakeFood(int takeAmount)
     {
         amount = (int)Mathf.Clamp(amount, 0, StartAmount);
