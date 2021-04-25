@@ -2168,8 +2168,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022933977}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 2.82, z: 0}
-  m_LocalScale: {x: 0.27105415, y: 0.27105415, z: 0.27105415}
+  m_LocalPosition: {x: 0.05, y: 4.94, z: 0}
+  m_LocalScale: {x: 0.50401, y: 0.50401, z: 0.50401}
   m_Children: []
   m_Father: {fileID: 1457605838}
   m_RootOrder: 0
@@ -3913,7 +3913,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935851713}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11, y: -5.093, z: 0.43}
+  m_LocalPosition: {x: 0.12, y: -5.633, z: 0.43}
   m_LocalScale: {x: 0.71715, y: 0.71715, z: 0.71715}
   m_Children: []
   m_Father: {fileID: 1457605838}
@@ -3963,7 +3963,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 15.630433, y: 21.089071}
+  m_Size: {x: 20.722197, y: 23.580788}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3980,8 +3980,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 20, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 20, y: 23.358393, z: 0.2}
+  m_Center: {x: 0, y: -0.108335756, z: 0}
 --- !u!1 &1969017479
 GameObject:
   m_ObjectHideFlags: 0
