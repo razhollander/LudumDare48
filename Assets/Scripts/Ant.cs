@@ -17,11 +17,13 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     bool _isMoving = false;
     Transform _transform;
     bool _hasOutlineMetrial;
+    SpriteRenderer _sprite;
     protected override void Awake()
     {
         base.Awake();
         _transform = transform;
-        _material = GetComponent<SpriteRenderer>().material;
+        _sprite = GetComponent<SpriteRenderer>();
+        _material = _sprite.material;
         _hasOutlineMetrial = _material.HasProperty(OUTLINE_ENABLED);
        // Debug.Log(_hasOutlineMetrial);
        
@@ -52,7 +54,19 @@ public class Ant : OverridableMonoBehaviour, ISelectable
         Debug.Log("Do task "+point);
 
         _destPoint = point + Random.insideUnitCircle * _destCircleRadios;
-        Debug.DrawLine(transform.position, _destPoint, Color.blue, 5);
+        //_transform.l(_destPoint, Vector2.up);
+        Vector3 diff = point - _transform.position.ToVector2_Y();
+        diff.Normalize();
+
+        float yRotation = _destPoint.x > _transform.position.x ? 180 : 0;
+        float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+    
+        _transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 180);
+        _transform.Rotate(Vector3.right, yRotation);// = new Vector3(_transform.localEulerAngles.x, yRotation, _transform.localEulerAngles.z);
+        //_sprite.flipX = _destPoint.x > _transform.position.x;
+        //_sprite.flipY = _destPoint.x < _transform.position.x;
+
+        // Debug.DrawLine(transform.position, _destPoint, Color.blue, 5);
         _isMoving = true;
     }
 
@@ -61,7 +75,6 @@ public class Ant : OverridableMonoBehaviour, ISelectable
         if (_isMoving) 
         {
             _transform.position = Vector2.MoveTowards(_transform.position, _destPoint, _speed * Time.deltaTime);
-
             if (_transform.position.x == _destPoint.x && _transform.position.y == _destPoint.y)
             {
                 _isMoving = false; 
