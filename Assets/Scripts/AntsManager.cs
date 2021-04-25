@@ -7,11 +7,10 @@ public class AntsManager : MonoBehaviour
     [SerializeField]
     Ant antPrefab;
 
-    [ContextMenu("Add ant")]
-    public void AddAnt()
+    public void AddAnt(Vector2 pos)
     {
         var ant = antPrefab.Get<Ant>(false);
-        ant.transform.position = GameManager.instance.queen.transform.position;
+        ant.transform.position = pos;
         ant.gameObject.SetActive(true);
     }
 }

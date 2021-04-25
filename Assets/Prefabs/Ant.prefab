@@ -132,7 +132,7 @@ MonoBehaviour:
   updateWhenDisabled: 0
   _speed: 1
   _destCircleRadios: 0.1
-  _foodCollectAmount: 1
+  _foodCollectAmount: 10
   _foodCrumbSpriteRenderer: {fileID: 1713254581558678281}
   _isMoving: 0
 --- !u!212 &6071654042279241216
