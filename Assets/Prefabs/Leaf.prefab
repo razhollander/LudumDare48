@@ -249,7 +249,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d9da27adf0c04dc4d9b7c1dc4613ce5c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b15209f1b3f85624cb275ea69ffeae9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -272,7 +272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60026cda094f26b43ae604cb7024607a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodCrumbSprite: {fileID: 0}
+  _healthCanvas: {fileID: 1952012433896821974}
+  FoodCrumbSprite: {fileID: 21300000, guid: d9da27adf0c04dc4d9b7c1dc4613ce5c, type: 3}
   StartAmount: 30
   HealthBar: {fileID: 7120002614881945835}
 --- !u!135 &8901881111373423194

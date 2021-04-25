@@ -114,6 +114,12 @@ public class global_selection : MonoBehaviour
                         vecs[i] = ray.origin - hit.point;
                         Debug.DrawLine(Camera.main.ScreenToWorldPoint(corner), hit.point, Color.red, 1.0f);
                     }
+                    else
+                    {
+                        selected_table.deselectAll();
+                        dragSelect = false;
+                        return;
+                    }
                     i++;
                 }
 
