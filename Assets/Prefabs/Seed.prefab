@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.127}
-  m_SizeDelta: {x: 0.39640683, y: 0.05383241}
+  m_AnchoredPosition: {x: 0, y: 6.06}
+  m_SizeDelta: {x: 13.398804, y: 1.8214478}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7780689010861054427
 CanvasRenderer:
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 8399104792456720817}
   - component: {fileID: 7213463350860430883}
   m_Layer: 0
-  m_Name: Food_3
+  m_Name: Seed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,7 +203,7 @@ Transform:
   m_GameObject: {fileID: 5494717903950063262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children:
   - {fileID: 7462315935239000394}
   m_Father: {fileID: 0}
@@ -248,8 +248,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 0.2120986, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 98d2be7644155c4469d277efac92f8a0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -272,7 +272,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FoodCrumbSprite: {fileID: 0}
-  amount: 0
   StartAmount: 30
   HealthBar: {fileID: 2641713171507646119}
 --- !u!54 &8399104792456720817
@@ -338,8 +337,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.39640683, y: 0.05383241}
+  m_AnchoredPosition: {x: 0.0000014454, y: -0.00000058115}
+  m_SizeDelta: {x: 13.398808, y: 1.8214493}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4263140584422510339
 CanvasRenderer:
