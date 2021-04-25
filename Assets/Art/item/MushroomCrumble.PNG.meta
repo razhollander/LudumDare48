@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Art/item/MushroomCrumble.PNG.meta
 guid: 1d799ad8594964a40a84db2afe89dbfa
+=======
+guid: 699f0a85fa1ee8146b1fb47be149e084
+>>>>>>> e7505db76268eba0f1e3aa5e290c9959af3ca0a9:Assets/Art/background/background_dirtPattern2.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,13 +38,13 @@ TextureImporter:
     filterMode: -1
     aniso: 2
     mipBias: -100
-    wrapU: 1
-    wrapV: 1
+    wrapU: 0
+    wrapV: 0
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 3
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -61,7 +65,11 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
+<<<<<<< HEAD:Assets/Art/item/MushroomCrumble.PNG.meta
     maxTextureSize: 256
+=======
+    maxTextureSize: 8192
+>>>>>>> e7505db76268eba0f1e3aa5e290c9959af3ca0a9:Assets/Art/background/background_dirtPattern2.png.meta
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -73,7 +81,11 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+<<<<<<< HEAD:Assets/Art/item/MushroomCrumble.PNG.meta
     maxTextureSize: 256
+=======
+    maxTextureSize: 8192
+>>>>>>> e7505db76268eba0f1e3aa5e290c9959af3ca0a9:Assets/Art/background/background_dirtPattern2.png.meta
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -97,7 +109,11 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+<<<<<<< HEAD:Assets/Art/item/MushroomCrumble.PNG.meta
     maxTextureSize: 256
+=======
+    maxTextureSize: 8192
+>>>>>>> e7505db76268eba0f1e3aa5e290c9959af3ca0a9:Assets/Art/background/background_dirtPattern2.png.meta
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -121,7 +137,11 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+<<<<<<< HEAD:Assets/Art/item/MushroomCrumble.PNG.meta
     maxTextureSize: 256
+=======
+    maxTextureSize: 8192
+>>>>>>> e7505db76268eba0f1e3aa5e290c9959af3ca0a9:Assets/Art/background/background_dirtPattern2.png.meta
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1

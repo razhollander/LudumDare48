@@ -30,6 +30,9 @@ public class CameraDrag : MonoBehaviour
         Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize += zoom * -5;
         Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize =
             Mathf.Clamp(Camera.main.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.OrthographicSize, 3, 7);
+
+      //  Vector3 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+      //  Camera.main.transform.position = Camera.main.transform.position + dir;
     }
         //Move camera
     //    if ((Input.mousePosition.x > screenWidth - offset) && transform.position.x < minMaxXPosition.y)
