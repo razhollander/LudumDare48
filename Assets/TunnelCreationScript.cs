@@ -54,8 +54,8 @@ public class TunnelCreationScript : MonoBehaviour
 
     public void UpdateLine(Vector2 newPos)
     {
-        //positions.Add(newPos);
-        //_lr.positionCount++;
-        //_lr.SetPosition(_lr.positionCount - 1 ,newPos);
+        positions.Add(newPos);
+        _lr.positionCount++;
+        _lr.SetPosition(_lr.positionCount - 1, newPos);
     }
 }
