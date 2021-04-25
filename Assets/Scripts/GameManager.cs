@@ -7,8 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameObject queen;
     public AntsManager antManager;
-    [SerializeField]
-    AnimationCurve animationCurve;
+    
     //public ants manager
     //pubilc enemies manager
     //public food manager
@@ -22,12 +21,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
     }
-    [ContextMenu("Debug")]
-    private void DebugText()
-    {
-        Debug.Log(animationCurve.Evaluate(0.5f));
 
-    }
+    
     // Update is called once per frame
     void Update()
     {
