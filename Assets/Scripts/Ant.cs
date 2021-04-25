@@ -4,6 +4,9 @@ using UnityEngine;
 using DG.Tweening;
 public class Ant : OverridableMonoBehaviour, ISelectable
 {
+    int WALKING_ANIMATION = Animator.StringToHash("AntWalking");
+    int IDLE_ANIMATION = Animator.StringToHash("AntIdle");
+
     [SerializeField]
     private float _speed;
     [SerializeField]
@@ -14,16 +17,19 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     private SpriteRenderer _foodCrumbSpriteRenderer;
     private Material _material;
     public static readonly int OUTLINE_ENABLED = Shader.PropertyToID("_OutlineEnabled");
+
     Vector2 _destPoint;
     public bool _isMoving = false;
     Transform _transform;
     bool _hasOutlineMetrial;
     SpriteRenderer _sprite;
     bool _isCarryingFood = false;
-
+    Animator _animator;
+    FoodScript _lastFood;
     protected override void Awake()
     {
         base.Awake();
+        _animator = GetComponent<Animator>();
         _transform = transform;
         _sprite = GetComponent<SpriteRenderer>();
         _material = _sprite.material;
@@ -35,6 +41,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
         _foodCrumbSpriteRenderer.sprite = null;
         _isCarryingFood = false;
         _isMoving = false;
+        _animator.Play(IDLE_ANIMATION);
     }
     public void Deselect()
     {
@@ -68,6 +75,8 @@ public class Ant : OverridableMonoBehaviour, ISelectable
         _transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 180);
         _transform.Rotate(Vector3.right, yRotation);
         _isMoving = true;
+        _animator.Play(WALKING_ANIMATION);
+
     }
 
     public override void UpdateMe() 
@@ -79,6 +88,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
             if (_transform.position.x == _destPoint.x && _transform.position.y == _destPoint.y)
             {
                 _isMoving = false;
+                _animator.Play(IDLE_ANIMATION);
                 GetComponent<TunnelCreationScript>().dig = false;
             }
         }
@@ -95,6 +105,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
             _foodCrumbSpriteRenderer.sprite = food.FoodCrumbSprite;
             _isCarryingFood = true;
             SetDestination(GameManager.instance.queen.transform.position);
+            _lastFood = food;
         }
 
         var queen = other.GetComponent<QueenScript>();
@@ -104,7 +115,11 @@ public class Ant : OverridableMonoBehaviour, ISelectable
             queen.Feed(_foodCollectAmount);
             _foodCrumbSpriteRenderer.sprite = null;
             _isCarryingFood = false;
-            SetDestination(_transform.position);
+            
+            if(_lastFood!=null)
+            {
+                SetDestination(_lastFood.transform.position.ToVector2_Y());
+            }
         }
 
         if (other.tag == "Enemy")
