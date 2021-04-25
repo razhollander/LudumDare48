@@ -11,7 +11,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     [SerializeField]
     private int _foodCollectAmount = 1;
     [SerializeField]
-    private SpriteRenderer foodCrumbSpriteRenderer;
+    private SpriteRenderer _foodCrumbSpriteRenderer;
     private Material _material;
     public static readonly int OUTLINE_ENABLED = Shader.PropertyToID("_OutlineEnabled");
     Vector2 _destPoint;
@@ -31,7 +31,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
 
     private void OnEnable()
     {
-        _sprite.sprite = null;
+        _foodCrumbSpriteRenderer.sprite = null;
         _isCarryingFood = false;
         _isMoving = false;
     }
@@ -47,14 +47,12 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     {
         if (_hasOutlineMetrial)
         {
-            Debug.Log("Ant Selected");
             _material.SetInt(OUTLINE_ENABLED, 1);
         }
     }
 
     public void DoSelectedTask(Vector2 point)
     {
-        Debug.Log("Do task "+point);
         SetDestination(point);
     }
 
@@ -85,12 +83,13 @@ public class Ant : OverridableMonoBehaviour, ISelectable
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("COLLIDE!");
         var food = other.GetComponent<FoodScript>();
 
         if (food != null && !_isCarryingFood)
         {
             food.TakeFood(_foodCollectAmount);
-            foodCrumbSpriteRenderer.sprite = food.FoodCrumbSprite;
+            _foodCrumbSpriteRenderer.sprite = food.FoodCrumbSprite;
             _isCarryingFood = true;
             SetDestination(GameManager.instance.queen.transform.position);
         }

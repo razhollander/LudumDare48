@@ -21,7 +21,7 @@ public class TunnelCreationScript : MonoBehaviour
             int index = 0;
             index++;
           //  _lineRenderer.positionCount;
-            _lineRenderer.SetPosition(index, transform.position);
+            //_lineRenderer.SetPosition(index, transform.position);
         }
     }
 }
