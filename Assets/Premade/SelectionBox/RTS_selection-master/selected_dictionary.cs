@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class selected_dictionary : MonoBehaviour
 {
-    public Dictionary<int, GameObject> selectedTable = new Dictionary<int, GameObject>();
+    private Dictionary<int, ISelectable> selectedTable = new Dictionary<int, ISelectable>();
 
     public void addSelected(GameObject go)
     {
@@ -13,9 +13,17 @@ public class selected_dictionary : MonoBehaviour
 
         if (!selectedTable.ContainsKey(id) && selectable != null)
         {
-            selectedTable.Add(id, go);
+            selectedTable.Add(id, selectable);
             selectable.Select();
             Debug.Log("Added " + id + " to selected dict");
+        }
+    }
+
+    public void DoTask(Vector2 point)
+    {
+        foreach (var selectable in selectedTable)
+        {
+            selectable.Value.DoSelectedTask(point);
         }
     }
 
@@ -23,7 +31,7 @@ public class selected_dictionary : MonoBehaviour
     {
         if (selectedTable.ContainsKey(id))
         {
-            var selectable = selectedTable[id].GetComponent<ISelectable>();
+            var selectable = selectedTable[id];
 
             if (selectable != null)
             {
@@ -36,11 +44,11 @@ public class selected_dictionary : MonoBehaviour
 
     public void deselectAll()
     {
-        foreach(KeyValuePair<int,GameObject> pair in selectedTable)
+        foreach(KeyValuePair<int,ISelectable> pair in selectedTable)
         {
             if(pair.Value != null)
             {
-                var selectable = pair.Value.GetComponent<ISelectable>();
+                var selectable = pair.Value;
 
                 if (selectable != null)
                 {

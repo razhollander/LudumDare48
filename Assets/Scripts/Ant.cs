@@ -22,7 +22,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
         _transform = transform;
         _material = GetComponent<SpriteRenderer>().material;
         _hasOutlineMetrial = _material.HasProperty(OUTLINE_ENABLED);
-        Debug.Log(_hasOutlineMetrial);
+       // Debug.Log(_hasOutlineMetrial);
        
     }
     //public bool isSelected => throw new System.NotImplementedException();
@@ -40,6 +40,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     {
         if (_hasOutlineMetrial)
         {
+            Debug.Log("Ant Selected");
             _material.SetInt(OUTLINE_ENABLED, 1);
            // _material.SetFloat(OUTLINE_WIDTH, _outlineWidth);
         }
@@ -47,6 +48,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
 
     public void DoSelectedTask(Vector2 point)
     {
+        Debug.Log("Do task "+point);
         _destPoint = point;
         _isMoving = true;
     }
@@ -55,7 +57,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     {
         if (_isMoving) 
         {
-            _transform.position = Vector2.MoveTowards(_transform.position, _destPoint, _speed);
+            _transform.position = Vector2.MoveTowards(_transform.position, _destPoint, _speed * Time.deltaTime);
 
             if (_transform.position.x == _destPoint.x && _transform.position.y == _destPoint.y)
             {

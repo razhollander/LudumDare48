@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialPoolSize: 10
+  updateWhenDisabled: 0
+  _outlineWidth: 2
+  _speed: 1
 --- !u!212 &6071654042279241216
 SpriteRenderer:
   m_ObjectHideFlags: 0

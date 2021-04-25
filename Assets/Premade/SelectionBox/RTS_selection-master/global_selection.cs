@@ -40,11 +40,8 @@ public class global_selection : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             p1 = Input.mousePosition;
-            
-            //if(selected_dictionary.selectedTable.Count>0)
-            //{
 
-            //}
+            selected_table.DoTask(Camera.main.ScreenPointToRay(p1).origin.ToVector2());
         }
 
         //2. while left mouse button held
