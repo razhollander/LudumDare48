@@ -1816,7 +1816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   queen: {fileID: 4830592846800591866}
-  antManager: {fileID: 0}
+  antManager: {fileID: 1627663763}
 --- !u!4 &827476506
 Transform:
   m_ObjectHideFlags: 0
@@ -4522,21 +4522,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4830592846800591865}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4830592846800591867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4830592846800591866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7cb5b4b18103ae4493fc6a10a5060bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FoodAmountPerAnt: 10
-  createAntsRadius: 1
-  health: 10
 --- !u!1001 &7389376132831507810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4622,12 +4607,12 @@ PrefabInstance:
     - target: {fileID: 7527364674131339792, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.05111885
+      value: -0.04059124
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674131339792, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3265889
+      value: -3.2733781
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674131339792, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
@@ -4687,12 +4672,12 @@ PrefabInstance:
     - target: {fileID: 7527364674809075362, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.03384018
+      value: 0.03331542
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674809075362, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.435952
+      value: 3.3827412
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674809075363, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
