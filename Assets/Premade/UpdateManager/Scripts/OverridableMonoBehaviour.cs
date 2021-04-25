@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class OverridableMonoBehaviour : MonoBehaviour
+public class OverridableMonoBehaviour : PooledMonobehaviour
 {
 	[SerializeField]
 	protected bool updateWhenDisabled = false;
