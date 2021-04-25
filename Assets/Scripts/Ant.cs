@@ -17,7 +17,8 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     private SpriteRenderer _foodCrumbSpriteRenderer;
     private Material _material;
     public static readonly int OUTLINE_ENABLED = Shader.PropertyToID("_OutlineEnabled");
-   
+    [SerializeField]
+    private ParticleSystem _bloodParticle;
     Vector2 _destPoint;
     public bool _isMoving = false;
     Transform _transform;
@@ -125,8 +126,14 @@ public class Ant : OverridableMonoBehaviour, ISelectable
         if (other.tag == "Enemy")
         {
             other.GetComponent<EnemyScript>().TakeDamage(5);
-            gameObject.SetActive(false);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        _bloodParticle.Play();
+        gameObject.SetActive(false);
     }
 
 }
