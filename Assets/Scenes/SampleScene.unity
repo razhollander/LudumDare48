@@ -2366,7 +2366,7 @@ MonoBehaviour:
   Food1: {fileID: 5494717903950063262, guid: cb9ecebc7760aab49ba4ab31ebba98aa, type: 3}
   Food2: {fileID: 5494717903950063262, guid: 27428dfb960821b4b908ecc7fccd88ff, type: 3}
   Food3: {fileID: 5494717903950063262, guid: d859a6b5cb62c7b409329e0ab1c90d6b, type: 3}
-  amount: 12
+  amount: 30
   Xmin: {fileID: 304279686}
   Xmax: {fileID: 73720678}
   Ymin: {fileID: 2085947595}
