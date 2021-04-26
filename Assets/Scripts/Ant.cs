@@ -107,11 +107,16 @@ public class Ant : OverridableMonoBehaviour, ISelectable
             GetComponent<TunnelCreationScript>().dig = true;
             if (_transform.position.x == _destPoint.x && _transform.position.y == _destPoint.y)
             {
-                _isMoving = false;
-                _animator.Play(IDLE_ANIMATION);
-                GetComponent<TunnelCreationScript>().dig = false;
+                StopMoving();
             }
         }
+    }
+
+    private void StopMoving()
+    {
+        _isMoving = false;
+        _animator.Play(IDLE_ANIMATION);
+        GetComponent<TunnelCreationScript>().dig = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -138,6 +143,10 @@ public class Ant : OverridableMonoBehaviour, ISelectable
             if (_lastFood!=null)
             {
                 SetDestination(_lastFood.transform.position.ToVector2_Y());
+            }
+            else
+            {
+                StopMoving();
             }
         }
 
