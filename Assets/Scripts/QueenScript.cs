@@ -62,6 +62,7 @@ public class QueenScript : MonoBehaviour
             soundManager.PlayqueenDie();
             animator.SetBool("Dead",true);
             gameOver.SetActive(true);
+            GameManager.instance.SaveHighScore();
             Time.timeScale = 0;         
             return;
         }
