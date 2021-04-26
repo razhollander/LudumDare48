@@ -20,6 +20,7 @@ public class EnemyScript : OverridableMonoBehaviour
     Transform _transform;
     public Image HealthBar;
     bool isMoving = true;
+    bool hit = false;
     
     protected override void Awake()
     {
@@ -36,12 +37,18 @@ public class EnemyScript : OverridableMonoBehaviour
         _healthCanvas.gameObject.SetActive(false);
     }
 
+    public void UnHit()
+    {
+        hit = false;
+    }
+
     public void TakeDamage(float damage)
     {
         health -= damage;
         health = (int)Mathf.Clamp(health, 0, startHealth);
         HealthBar.fillAmount = health / startHealth;
-
+        hit = true;
+        _animator.SetTrigger("hit");
         if (health <= 0)
         {
             gameObject.SetActive(false);
@@ -89,7 +96,7 @@ public class EnemyScript : OverridableMonoBehaviour
 
     public override void UpdateMe()
     {
-        if(!isMoving)
+        if(!isMoving || hit)
         {
             return;
         }
