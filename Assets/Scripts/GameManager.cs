@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         instance = this;
-        Debug.Log(PlayerPrefs.GetInt("Score"));
+
     }
 
     public void PlayGame()
@@ -48,8 +48,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("Score", UIScript.food);
         }
 
-            Debug.Log(UIScript.food);
-            Debug.Log(PlayerPrefs.GetInt("Score"));
+
         gameOver._highScore.text = PlayerPrefs.GetInt("Score").ToString();
         gameOver._currentScore.text = UIScript.food.ToString();
 
