@@ -170,8 +170,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: 157}
-  m_SizeDelta: {x: 291.3504, y: 173.28833}
+  m_AnchoredPosition: {x: 16, y: -436}
+  m_SizeDelta: {x: 291.3504, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5358143367677751118
 CanvasRenderer:
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Instruction
+  m_text: Instructions
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 342d91a3d41619f4b9610d2dac125000, type: 2}
   m_sharedMaterial: {fileID: 1656023660174782139, guid: 342d91a3d41619f4b9610d2dac125000,
@@ -544,8 +544,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: 288}
-  m_SizeDelta: {x: 291.3504, y: 188.58122}
+  m_AnchoredPosition: {x: 16, y: 239}
+  m_SizeDelta: {x: 291.3504, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4594378384724980285
 CanvasRenderer:
