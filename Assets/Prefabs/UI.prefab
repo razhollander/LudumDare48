@@ -2034,7 +2034,7 @@ GameObject:
   - component: {fileID: 1771653577387258741}
   - component: {fileID: 5961185776737391235}
   m_Layer: 0
-  m_Name: Up button
+  m_Name: Up Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2056,8 +2056,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 591, y: 249}
-  m_SizeDelta: {x: 112.6004, y: 70.3774}
+  m_AnchoredPosition: {x: 20, y: 247}
+  m_SizeDelta: {x: 112.6004, y: 113.45748}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4388194223091785594
 CanvasRenderer:
@@ -2086,7 +2086,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0b19792f0c45de048bc2caac2a4c6916, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b87d4c15f3033c4f819eae328f2d2a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2139,9 +2139,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8891359974214688289}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 0}
+        m_MethodName: Up
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
