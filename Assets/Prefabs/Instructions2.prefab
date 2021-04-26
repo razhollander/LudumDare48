@@ -3296,7 +3296,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.4, y: 57.1}
+  m_AnchoredPosition: {x: 14.4, y: 67}
   m_SizeDelta: {x: 173.5202, y: 43.603943}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3588395492065283790
@@ -3326,10 +3326,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Control the ants with click&drag selection box
+  m_text: 'Select the ants with click and drag selection box
 
-    Select ants and click
-    where they should go'
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 342d91a3d41619f4b9610d2dac125000, type: 2}
   m_sharedMaterial: {fileID: 1656023660174782139, guid: 342d91a3d41619f4b9610d2dac125000,

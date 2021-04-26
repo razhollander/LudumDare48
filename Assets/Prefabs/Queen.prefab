@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FoodAmountPerAnt: 1
-  createAntsRadius: 5
+  createAntsRadius: 4
   foodAmount: 0
   startHealth: 10
   gameOver: {fileID: 0}
