@@ -34,32 +34,11 @@ public class CameraDrag : MonoBehaviour
         //Vector3 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         //Camera.main.transform.position = Camera.main.transform.position + (dir * 0.5f);
     }
-    //Move camera
-    //    if ((Input.mousePosition.x > screenWidth - offset) && transform.position.x < minMaxXPosition.y)
-    //    {
-    //        cameraMove.x += MoveSpeed();
-    //    }
-    //    if ((Input.mousePosition.x < offset) && transform.position.x > minMaxXPosition.x)
-    //    {
-    //        cameraMove.x -= MoveSpeed();
-    //    }
-    //    if ((Input.mousePosition.y > screenHeight - offset) && transform.position.y < minMaxYPosition.y)
-    //    {
-    //        cameraMove.y += MoveSpeed();
-    //    }
-    //    if ((Input.mousePosition.y < offset) && transform.position.y > minMaxYPosition.x)
-    //    {
-    //        cameraMove.y -= MoveSpeed();
-    //    }
-    //    transform.position = cameraMove;
 
-
-    //}
-    //float MoveSpeed()
-    //{
-    //    return speed * Time.deltaTime;
-    //}
-
+    public void Up() // set by ui button
+    {
+        transform.position = Vector3.zero;
+    }
 }
 
 
