@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2921,7 +2921,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 44a1e0ea514a3a849a1673e1c0e5388b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3017,7 +3017,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b984d6af7b6ab394a9e97679e29056a6, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3113,7 +3113,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3ddc6ca6b695bcd47a02c921c90c2d6c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3648,12 +3648,12 @@ PrefabInstance:
     - target: {fileID: 7527364674131339792, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.022278786
+      value: -0.022305489
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674131339792, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.18383789
+      value: -0.18387032
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674131339792, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
@@ -3713,12 +3713,12 @@ PrefabInstance:
     - target: {fileID: 7527364674809075362, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00070762634
+      value: -0.00070667267
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674809075362, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.29320097
+      value: 0.2932334
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674809075363, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}

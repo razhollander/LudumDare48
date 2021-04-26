@@ -140,6 +140,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
         _speed = 1;
         GetComponent<SpriteRenderer>().color = Color.white;
         transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+        FindObjectOfType<SoundManager>().PlayantDie();
         gameObject.SetActive(false);
     }
 

@@ -8,5 +8,18 @@ public class SoundManager : MonoBehaviour
     public AudioSource queenHit;
     public AudioSource queenDie;
 
-    
+    public void PlayantDie()
+    {
+        antDie.Play();
+    }
+
+    public void PlayqueenHit()
+    {
+        queenHit.Play();
+    }
+
+    public void PlayqueenDie()
+    {
+        queenDie.Play();
+    }
 }

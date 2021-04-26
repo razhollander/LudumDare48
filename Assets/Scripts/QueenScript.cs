@@ -13,21 +13,25 @@ public class QueenScript : MonoBehaviour
     public float startHealth; 
     private Transform _transform;
     public UIScript UI;
-
+    SoundManager soundManager; 
     private void Awake()
     {
         _transform = transform;
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
         UI.UpdatehealthTxt(damage);
+        soundManager.PlayqueenHit();
+
     }
     public void Die()
     {
         if (health <= 0)
         {
+            soundManager.PlayqueenDie();
             //game over cahnge sprite
         }
     }
