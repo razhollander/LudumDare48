@@ -272,11 +272,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FoodAmountPerAnt: 1
-  createAntsRadius: 4
+  createAntsRadius: 5
   foodAmount: 0
   startHealth: 10
   gameOver: {fileID: 0}
-  timeToSpawn: 15
+  timeToSpawn: 25
 --- !u!135 &1041480080348491056
 SphereCollider:
   m_ObjectHideFlags: 0
