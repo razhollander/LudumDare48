@@ -18,22 +18,27 @@ public class QueenScript : MonoBehaviour
     {
         _transform = transform;
         soundManager = FindObjectOfType<SoundManager>();
+        health = startHealth;
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
         UI.UpdatehealthTxt(damage);
-        soundManager.PlayqueenHit();
+        Die();
 
     }
+
     public void Die()
     {
         if (health <= 0)
         {
             soundManager.PlayqueenDie();
+            Time.timeScale = 0;
             //game over cahnge sprite
+            return;
         }
+        else soundManager.PlayqueenHit();
     }
 
     public void Feed(int amount,FoodType kind)
