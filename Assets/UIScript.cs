@@ -32,7 +32,6 @@ public class UIScript : MonoBehaviour
     {       
         food += number;
         foodTxt.text = food.ToString();
-        Debug.Log(food.ToString());
     }
 
     public void UpdatehealthTxt(float number)
