@@ -9,7 +9,8 @@ public class QueenScript : MonoBehaviour
     [SerializeField]
     private float createAntsRadius = 1;
     [SerializeField]private int foodAmount = 0;
-    public int health;
+    private float health;
+    public float startHealth; 
     private Transform _transform;
     public UIScript UI;
 
@@ -17,11 +18,17 @@ public class QueenScript : MonoBehaviour
     {
         _transform = transform;
     }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        UI.UpdatehealthTxt(damage);
+    }
     public void Die()
     {
         if (health <= 0)
         {
-            //game over
+            //game over cahnge sprite
         }
     }
 

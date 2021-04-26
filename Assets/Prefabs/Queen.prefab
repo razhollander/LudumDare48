@@ -273,7 +273,7 @@ MonoBehaviour:
   FoodAmountPerAnt: 5
   createAntsRadius: 1
   foodAmount: 0
-  health: 10
+  startHealth: 10
   UI: {fileID: 0}
 --- !u!135 &1041480080348491056
 SphereCollider:

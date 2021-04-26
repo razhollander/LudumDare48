@@ -9,7 +9,7 @@ public class EnemyScript : OverridableMonoBehaviour
     Canvas _healthCanvas;
     [SerializeField]
     Animator _animator;
-    public int damage;
+    public int damage = 1;
     public float startHealth;
     float health;
     public float speed;
@@ -102,6 +102,15 @@ public class EnemyScript : OverridableMonoBehaviour
         else
         {
             _transform.position = Vector2.MoveTowards(_transform.position, _destPoint, speed * Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<QueenScript>())
+        {
+            other.GetComponent<QueenScript>().TakeDamage(damage);
+            TakeDamage(health);
         }
     }
 
