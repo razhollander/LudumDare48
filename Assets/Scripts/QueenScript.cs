@@ -54,6 +54,7 @@ public class QueenScript : MonoBehaviour
         UI = GameManager.instance.UIScript;
     }
 
+    [ContextMenu("Die")]
     public void Die()
     {
         if (health <= 0)
@@ -61,6 +62,7 @@ public class QueenScript : MonoBehaviour
             soundManager.PlayqueenDie();
             animator.SetBool("Dead",true);
             gameOver.SetActive(true);
+            GameManager.instance.SaveHighScore();
             Time.timeScale = 0;         
             return;
         }

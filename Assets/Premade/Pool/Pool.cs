@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Pool : OverridableMonoBehaviour
 {
-    private static Dictionary<PooledMonobehaviour, Pool> pools = new Dictionary<PooledMonobehaviour, Pool>();
+    public static Dictionary<PooledMonobehaviour, Pool> pools = new Dictionary<PooledMonobehaviour, Pool>();
 
     private Queue<PooledMonobehaviour> objects = new Queue<PooledMonobehaviour>();
     private List<PooledMonobehaviour> disabledObjects = new List<PooledMonobehaviour>();
@@ -14,6 +14,7 @@ public class Pool : OverridableMonoBehaviour
     {
         if (pools.ContainsKey(prefab))
             return pools[prefab];
+
         var pool = new GameObject("Pool-" + (prefab as Component).name).AddComponent<Pool>();
         pool.prefab = prefab;
 

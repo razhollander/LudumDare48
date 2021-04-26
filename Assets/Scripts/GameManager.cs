@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public UIScript UIScript;
     float _prevTimeScale = 1;
     GameState gameState = GameState.MenuScreen;
+    public GameOver gameOver;
     //public ants manager
     //pubilc enemies manager
     //public food manager
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         instance = this;
+        Debug.Log(PlayerPrefs.GetInt("Score"));
     }
 
     public void PlayGame()
@@ -37,6 +39,20 @@ public class GameManager : MonoBehaviour
             Time.timeScale = _prevTimeScale;
             selectionManager.enabled = true;
         }
+    }
+
+    public void SaveHighScore()
+    {
+        if (UIScript.food > PlayerPrefs.GetInt("Score"))
+        {
+            PlayerPrefs.SetInt("Score", UIScript.food);
+        }
+
+            Debug.Log(UIScript.food);
+            Debug.Log(PlayerPrefs.GetInt("Score"));
+        gameOver._highScore.text = PlayerPrefs.GetInt("Score").ToString();
+        gameOver._currentScore.text = UIScript.food.ToString();
+
     }
 
     public void SetMenuScreenGameState()
@@ -66,6 +82,7 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = _prevTimeScale;
+        Pool.pools = new Dictionary<PooledMonobehaviour, Pool>();
         SceneManager.LoadScene("SampleScene");
     }
 }
