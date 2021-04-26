@@ -90,7 +90,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2828899167115223548
 RectTransform:
   m_ObjectHideFlags: 0
@@ -227,7 +227,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -271,12 +271,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7cb5b4b18103ae4493fc6a10a5060bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodAmountPerAnt: 5
-  createAntsRadius: 1
+  FoodAmountPerAnt: 1
+  createAntsRadius: 3
   foodAmount: 0
   startHealth: 10
-  UI: {fileID: 0}
-  deadSprite: {fileID: 0}
+  gameOver: {fileID: 0}
+  timeToSpawn: 15
 --- !u!135 &1041480080348491056
 SphereCollider:
   m_ObjectHideFlags: 0
