@@ -28,7 +28,7 @@ public class PoolPreparer : MonoBehaviour
                 }
                 else
                 {
-                    Pool.GetPool(poolablePrefab)/*.GrowPool()*/;
+                    Pool.GetPool(poolablePrefab).GrowPool();
                 }
             }
         }

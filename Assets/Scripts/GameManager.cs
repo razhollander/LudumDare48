@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = _prevTimeScale;
+        Pool.pools = new Dictionary<PooledMonobehaviour, Pool>();
         SceneManager.LoadScene("SampleScene");
     }
 }

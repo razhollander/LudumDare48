@@ -54,6 +54,7 @@ public class QueenScript : MonoBehaviour
         UI = GameManager.instance.UIScript;
     }
 
+    [ContextMenu("Die")]
     public void Die()
     {
         if (health <= 0)
