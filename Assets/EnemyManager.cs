@@ -21,6 +21,7 @@ public class EnemyManager : MonoBehaviour
     AnimationCurve animationCurve;
     [SerializeField]float curveTime;
     [SerializeField] float minutesToEndGraph = 180;
+    [SerializeField] float timescale;
     void Start()
     {
         time = Random.Range(minTime, maxTime);
@@ -35,20 +36,21 @@ public class EnemyManager : MonoBehaviour
     public void Spawn()
     {
         curveTime += Time.deltaTime /minutesToEndGraph;
+         timescale = animationCurve.Evaluate(curveTime);
         if (time <= 0)
         {
             float rndNum = Random.Range(0f, 1f);
-            if (rndNum <= curveTime)
+            if (rndNum <= timescale)
             {
                 EnemyScript enemy;
 
-                if (curveTime < timeToWave1)
+                if (timescale < timeToWave1)
                 {
                     int rnd = Random.Range(0, firstWave.Length);
                     enemy = firstWave[rnd].Get<EnemyScript>();
                 }
 
-                else if (curveTime < timeToWave2 && curveTime > timeToWave1)
+                else if (timescale < timeToWave2 && timescale > timeToWave1)
                 {
                     int rnd = Random.Range(0, secondWave.Length);
                     enemy = secondWave[rnd].Get<EnemyScript>();
