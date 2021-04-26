@@ -12,10 +12,8 @@ public class Pool : OverridableMonoBehaviour
 
     public static Pool GetPool(PooledMonobehaviour prefab)
     {
-        Debug.Log("GetPool1");
         if (pools.ContainsKey(prefab))
             return pools[prefab];
-        Debug.Log("GetPool2");
 
         var pool = new GameObject("Pool-" + (prefab as Component).name).AddComponent<Pool>();
         pool.prefab = prefab;
