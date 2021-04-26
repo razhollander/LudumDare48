@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FoodAmountPerAnt: 1
-  createAntsRadius: 3
+  createAntsRadius: 4
   foodAmount: 0
   startHealth: 10
   gameOver: {fileID: 0}
@@ -288,8 +288,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 12.4771
+  m_Center: {x: 0, y: -3.4, z: 0}
 --- !u!54 &6337985641471301181
 Rigidbody:
   m_ObjectHideFlags: 0

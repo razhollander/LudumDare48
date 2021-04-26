@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1684,7 +1684,7 @@ PrefabInstance:
     - target: {fileID: 3128405226396555972, guid: 6f4bb5e9d7a82a04f8ad89805e5cf280,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7156518116010281158, guid: 6f4bb5e9d7a82a04f8ad89805e5cf280,
         type: 3}
@@ -2753,8 +2753,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 53.538883, y: 95.32915, z: 0.2}
-  m_Center: {x: 0.0012500228, y: -0.7028214, z: 0}
+  m_Size: {x: 53.538883, y: 97.48323, z: 0.2}
+  m_Center: {x: 0.0012500228, y: 0.37422228, z: 0}
 --- !u!1 &1969017479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3418,7 +3418,7 @@ PrefabInstance:
     - target: {fileID: -5229858109071951417, guid: f4014e87e0d0b5144aebe437859bd6f2,
         type: 3}
       propertyPath: createAntsRadius
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -5229858109071951417, guid: f4014e87e0d0b5144aebe437859bd6f2,
         type: 3}
@@ -3667,12 +3667,12 @@ PrefabInstance:
     - target: {fileID: 7527364674131339792, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.03655529
+      value: -0.036532402
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674131339792, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.2391825
+      value: -2.2391152
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674131339792, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
@@ -3732,12 +3732,12 @@ PrefabInstance:
     - target: {fileID: 7527364674809075362, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.013546944
+      value: 0.01354599
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674809075362, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.348546
+      value: 2.3484788
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674809075363, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
