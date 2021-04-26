@@ -27,6 +27,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     bool _isCarryingFood = false;
     Animator _animator;
     FoodScript _lastFood;
+    FoodType carryingFood;
     public int _damage = 5;
     protected override void Awake()
     {
@@ -107,17 +108,17 @@ public class Ant : OverridableMonoBehaviour, ISelectable
             _isCarryingFood = true;
             SetDestination(GameManager.instance.queen.transform.position);
             _lastFood = food;
+            carryingFood = _lastFood.FoodType;
         }
 
         var queen = other.GetComponent<QueenScript>();
 
         if (queen != null && _isCarryingFood)
         {
-            queen.Feed(_foodCollectAmount,_lastFood.name);
+            queen.Feed(_foodCollectAmount, carryingFood);
             _foodCrumbSpriteRenderer.sprite = null;
             _isCarryingFood = false;
-            
-            if(_lastFood!=null)
+            if (_lastFood!=null)
             {
                 SetDestination(_lastFood.transform.position.ToVector2_Y());
             }

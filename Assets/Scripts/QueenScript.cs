@@ -25,27 +25,25 @@ public class QueenScript : MonoBehaviour
         }
     }
 
-    public void Feed(int amount,string kind)
+    public void Feed(int amount,FoodType kind)
     {
-        Debug.Log(kind);
         foodAmount += amount;
         UI.UpdateFoodTxt(amount);
         var antsNumber = foodAmount / FoodAmountPerAnt;
+
         for (int i = 0; i < antsNumber; i++)
         {
-            if (kind == "Leaf(Clone)")
+            switch( kind)
             {
-              CreateAnt();
-            }
-
-            else if (kind == "Seed(Clone)")
-            {
-                CreateFastAnt();
-            }
-
-            else if (kind == "Mushrooms(Clone)")
-            {
-                CreateBigAnt();
+                case FoodType.Fast:
+                    CreateFastAnt();
+                    break;
+                case FoodType.Normal:
+                    CreateAnt();
+                    break;
+                case FoodType.Strong:
+                    CreateBigAnt();
+                    break;
             }
         }
     }

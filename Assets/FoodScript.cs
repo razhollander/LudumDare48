@@ -7,6 +7,7 @@ public class FoodScript : MonoBehaviour
 {
     [SerializeField]
     Canvas _healthCanvas;
+    public FoodType FoodType;
 
     public Sprite FoodCrumbSprite;
     private int amount;
@@ -37,4 +38,11 @@ public class FoodScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+}
+
+public enum FoodType
+{
+    Normal,
+    Fast,
+    Strong
 }

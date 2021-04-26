@@ -44,21 +44,18 @@ public class EnemyManager : MonoBehaviour
 
                 if (curveTime < timeToWave1)
                 {
-                    Debug.Log("wave 1");
                     int rnd = Random.Range(0, firstWave.Length);
                     enemy = firstWave[rnd].Get<EnemyScript>();
                 }
 
                 else if (curveTime < timeToWave2 && curveTime > timeToWave1)
                 {
-                    Debug.Log("wave 2");
                     int rnd = Random.Range(0, secondWave.Length);
                     enemy = secondWave[rnd].Get<EnemyScript>();
                 }
 
                 else
                 {
-                    Debug.Log("wave 3");
                     int rnd = Random.Range(0, thirdWave.Length);
                     enemy = thirdWave[rnd].Get<EnemyScript>();
                 }
