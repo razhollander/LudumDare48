@@ -10,7 +10,7 @@ public class FoodScript : MonoBehaviour
 
     public Sprite FoodCrumbSprite;
     private int amount;
-
+    
     public float StartAmount = 30;
     public Image HealthBar;
 
