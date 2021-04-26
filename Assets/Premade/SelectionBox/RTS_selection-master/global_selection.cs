@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class global_selection : MonoBehaviour
+public class global_selection : OverridableMonoBehaviour
 {
     [SerializeField]
     Arrow _arrow;
@@ -22,23 +22,30 @@ public class global_selection : MonoBehaviour
 
     //the corners of our 2d selection box
     Vector2[] corners;
-
+    Color colorFill = new Color(0.8f, 0.8f, 0.95f, 0.25f);
+    Color colorBorder = new Color(0.8f, 0.8f, 0.95f);
+    const int thikness = 2;
     //the vertices of our meshcollider
     Vector3[] verts;
     Vector3[] vecs;
 
     // Start is called before the first frame update
+    protected override void Awake()
+    {
+        base.Awake();
+        selected_table = GetComponent<selected_dictionary>();
+
+    }
     void Start()
     {
        // id_table = GetComponent<id_dictionary>();
-        selected_table = GetComponent<selected_dictionary>();
         dragSelect = false;
         _arrow = Instantiate(_arrow);
         _arrow.SetActiveFalse();
     }
 
     // Update is called once per frame
-    void Update()
+    public override void UpdateMe()
     {
         if (Input.GetMouseButtonDown(1))
         {
@@ -113,7 +120,7 @@ public class global_selection : MonoBehaviour
                 {
                     Ray ray = Camera.main.ScreenPointToRay(corner);
 
-                    if (Physics.Raycast(ray, out hit, 50000.0f))
+                    if (Physics.Raycast(ray, out hit, 100))
                     {
                         verts[i] = new Vector3(hit.point.x, hit.point.y, hit.point.z);
                         vecs[i] = ray.origin - hit.point;
@@ -156,8 +163,8 @@ public class global_selection : MonoBehaviour
         if(dragSelect == true)
         {
             var rect = Utils.GetScreenRect(p1, Input.mousePosition);
-            Utils.DrawScreenRect(rect, new Color(0.8f, 0.8f, 0.95f, 0.25f));
-            Utils.DrawScreenRectBorder(rect, 2, new Color(0.8f, 0.8f, 0.95f));
+            Utils.DrawScreenRect(rect, colorFill);
+            //Utils.DrawScreenRectBorder(rect, thikness, colorBorder);
         }
     }
 
