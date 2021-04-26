@@ -29,6 +29,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     FoodScript _lastFood;
     FoodType carryingFood;
     public int _damage = 5;
+    private UIScript UIScript;
     protected override void Awake()
     {
         base.Awake();
@@ -36,7 +37,12 @@ public class Ant : OverridableMonoBehaviour, ISelectable
         _transform = transform;
         _sprite = GetComponent<SpriteRenderer>();
         _material = _sprite.material;
-        _hasOutlineMetrial = _material.HasProperty(OUTLINE_ENABLED);       
+        _hasOutlineMetrial = _material.HasProperty(OUTLINE_ENABLED);
+    }
+
+    private void Start()
+    {
+        UIScript = GameManager.instance.UIScript;
     }
 
     private void OnEnable()
@@ -45,7 +51,18 @@ public class Ant : OverridableMonoBehaviour, ISelectable
         _isCarryingFood = false;
         _isMoving = false;
         _animator.Play(IDLE_ANIMATION);
+        if (UIScript == null)
+            UIScript = GameManager.instance.UIScript;
+
+        UIScript.UpdateAntsTxt(1);
     }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        UIScript.UpdateAntsTxt(-1);
+    }
+
     public void Deselect()
     {
         if (_hasOutlineMetrial)

@@ -13,7 +13,7 @@ public class UIScript : MonoBehaviour
     int food;
     float startHealth;
     float health;
-    int ants = 2;
+    int ants = 0;
     QueenScript queen;
     private void Start()
     {
@@ -32,6 +32,7 @@ public class UIScript : MonoBehaviour
     {       
         food += number;
         foodTxt.text = food.ToString();
+        Debug.Log(food.ToString());
     }
 
     public void UpdatehealthTxt(float number)
