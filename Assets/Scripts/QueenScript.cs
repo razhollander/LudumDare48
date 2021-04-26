@@ -14,12 +14,13 @@ public class QueenScript : MonoBehaviour
     private Transform _transform;
     public UIScript UI;
     SoundManager soundManager;
-
-    public Sprite deadSprite;
+    Animator animator;
+    public GameObject gameOver;
     private void Awake()
     {
         _transform = transform;
         soundManager = FindObjectOfType<SoundManager>();
+        animator = GetComponent<Animator>();
         health = startHealth;
     }
 
@@ -36,8 +37,9 @@ public class QueenScript : MonoBehaviour
         if (health <= 0)
         {
             soundManager.PlayqueenDie();
-            Time.timeScale = 0;
-            
+            animator.SetBool("Dead",true);
+            gameOver.SetActive(true);
+            Time.timeScale = 0;         
             return;
         }
         else soundManager.PlayqueenHit();

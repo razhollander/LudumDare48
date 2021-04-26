@@ -332,7 +332,7 @@ MonoBehaviour:
   tunnelPrefab: {fileID: 6576218313410826406, guid: 75869e6919470cf44a4db27bc7d92f84,
     type: 3}
   currentLine: {fileID: 0}
-  tunnelSize: 0.5
+  tunnelSize: 0.7
   _flag: 1
   positions: []
   dig: 0
@@ -377,12 +377,12 @@ PrefabInstance:
     - target: {fileID: 2726387451816568529, guid: c862bbe139a865a41a07933c9b980026,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.53
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 2726387451816568529, guid: c862bbe139a865a41a07933c9b980026,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.086486
+      value: -1.47
       objectReference: {fileID: 0}
     - target: {fileID: 2726387451816568529, guid: c862bbe139a865a41a07933c9b980026,
         type: 3}
