@@ -10,7 +10,7 @@ public class UIScript : MonoBehaviour
     public TextMeshProUGUI antsTxt;
     public TextMeshProUGUI foodTxt;
     public Image healthBar;
-    int food;
+    public int food;
     float startHealth;
     float health;
     int ants = 0;
@@ -21,7 +21,6 @@ public class UIScript : MonoBehaviour
         startHealth = queen.startHealth;
         health = startHealth;
 
-        PlayerPrefs.SetInt("Score",0);
     }
 
     public void UpdateAntsTxt(int number)
