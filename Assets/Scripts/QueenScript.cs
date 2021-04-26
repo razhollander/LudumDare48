@@ -13,7 +13,9 @@ public class QueenScript : MonoBehaviour
     public float startHealth; 
     private Transform _transform;
     public UIScript UI;
-    SoundManager soundManager; 
+    SoundManager soundManager;
+
+    public Sprite deadSprite;
     private void Awake()
     {
         _transform = transform;
@@ -35,7 +37,7 @@ public class QueenScript : MonoBehaviour
         {
             soundManager.PlayqueenDie();
             Time.timeScale = 0;
-            //game over cahnge sprite
+            
             return;
         }
         else soundManager.PlayqueenHit();
