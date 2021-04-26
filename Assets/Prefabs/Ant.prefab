@@ -364,11 +364,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5478650283306138382}
     m_Modifications:
-    - target: {fileID: 1039743651982352351, guid: c862bbe139a865a41a07933c9b980026,
-        type: 3}
-      propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 2597845309989231896, guid: c862bbe139a865a41a07933c9b980026,
         type: 3}
       propertyPath: m_Name
@@ -429,26 +424,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2726387451816568529, guid: c862bbe139a865a41a07933c9b980026,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1352501
-      objectReference: {fileID: 0}
-    - target: {fileID: 2726387451816568529, guid: c862bbe139a865a41a07933c9b980026,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1352501
-      objectReference: {fileID: 0}
-    - target: {fileID: 2726387451816568529, guid: c862bbe139a865a41a07933c9b980026,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1352501
-      objectReference: {fileID: 0}
-    - target: {fileID: 3185403420513605041, guid: c862bbe139a865a41a07933c9b980026,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1aa52fe98cef51748be4a42fd0023c8f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c862bbe139a865a41a07933c9b980026, type: 3}
 --- !u!4 &1827976236281603293 stripped
