@@ -275,7 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthCanvas: {fileID: 2239946445419416137}
   FoodCrumbSprite: {fileID: 21300000, guid: 98d2be7644155c4469d277efac92f8a0, type: 3}
-  StartAmount: 30
+  StartAmount: 7
   HealthBar: {fileID: 2641713171507646119}
 --- !u!54 &8399104792456720817
 Rigidbody:

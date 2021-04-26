@@ -379,7 +379,7 @@ MonoBehaviour:
   _healthCanvas: {fileID: 5511706910926441366}
   _animator: {fileID: 7044877856679675845}
   damage: 5
-  startHealth: 15
+  startHealth: 35
   speed: 0.3
   MinAttackDistance: 1
   dis: 0

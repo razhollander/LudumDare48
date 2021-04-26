@@ -1179,7 +1179,7 @@ MonoBehaviour:
   disToLayer1: 2
   disToLayer2: 15
   disToLayer3: 30
-  amount: 30
+  amount: 40
   Xmin: {fileID: 304279686}
   Xmax: {fileID: 73720678}
   Ymin: {fileID: 2085947595}
@@ -1488,7 +1488,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   curveTime: 0
-  minutesToEndGraph: 60
+  minutesToEndGraph: 300
 --- !u!1 &1457605837
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,6 +2247,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1457605838}
     m_Modifications:
+    - target: {fileID: 1556847419381210721, guid: e1814a74dbf2a6f409154378a6398c5b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2426639270294140586, guid: e1814a74dbf2a6f409154378a6398c5b,
         type: 3}
       propertyPath: m_Name
