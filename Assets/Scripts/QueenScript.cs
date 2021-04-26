@@ -16,14 +16,32 @@ public class QueenScript : MonoBehaviour
     SoundManager soundManager;
     Animator animator;
     public GameObject gameOver;
+
+    [SerializeField] float timeToSpawn;
+    float _time;
     private void Awake()
     {
         _transform = transform;
         soundManager = FindObjectOfType<SoundManager>();
         animator = GetComponent<Animator>();
         health = startHealth;
+        _time = timeToSpawn;
     }
 
+    private void Update()
+    {
+        _time -= Time.deltaTime;
+        Spawn();
+    }
+    void Spawn()
+    {
+        if (_time <= 0)
+        {
+            Vector2 creationPoint = _transform.position.ToVector2_Y() + Random.insideUnitCircle * createAntsRadius;
+            GameManager.instance.antManager.AddAnt(creationPoint);
+            _time = timeToSpawn;
+        }
+    }
     public void TakeDamage(int damage)
     {
         health -= damage;
