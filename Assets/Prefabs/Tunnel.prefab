@@ -49,7 +49,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8b928296364b7d4da72c99a5c192647, type: 2}
+  - {fileID: 2100000, guid: b08f4b64765a6e74593547eaf3c5913c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -67,8 +67,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 452849815
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
