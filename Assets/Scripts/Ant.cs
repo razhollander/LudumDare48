@@ -8,7 +8,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     int IDLE_ANIMATION = Animator.StringToHash("AntIdle");
 
     [SerializeField]
-    private float _speed;
+    public float _speed;
     [SerializeField]
     private float _destCircleRadios=1;
     [SerializeField]
@@ -27,6 +27,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
     bool _isCarryingFood = false;
     Animator _animator;
     FoodScript _lastFood;
+    public int _damage = 5;
     protected override void Awake()
     {
         base.Awake();
@@ -112,7 +113,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
 
         if (queen != null && _isCarryingFood)
         {
-            queen.Feed(_foodCollectAmount);
+            queen.Feed(_foodCollectAmount,_lastFood.name);
             _foodCrumbSpriteRenderer.sprite = null;
             _isCarryingFood = false;
             
@@ -124,7 +125,7 @@ public class Ant : OverridableMonoBehaviour, ISelectable
 
         if (other.tag == "Enemy")
         {
-            other.GetComponent<EnemyScript>().TakeDamage(5);
+            other.GetComponent<EnemyScript>().TakeDamage(_damage);
             Die();
         }
     }
@@ -135,6 +136,9 @@ public class Ant : OverridableMonoBehaviour, ISelectable
         var blood = GameObject.Instantiate(_bloodParticle.gameObject);
         blood.transform.position = _transform.position;
         blood.SetActive(true);
+        _speed = 1;
+        GetComponent<SpriteRenderer>().color = Color.white;
+        transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
         gameObject.SetActive(false);
     }
 

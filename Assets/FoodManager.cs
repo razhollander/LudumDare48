@@ -20,6 +20,7 @@ public class FoodManager : MonoBehaviour
             Vector2 randomPos = new Vector2(Random.Range(Xmin.position.x,Xmax.position.x), Random.Range(Ymin.position.y, Ymax.position.y));
            
             float dis = Vector2.Distance(randomPos, transform.position);
+            //Debug.Log(dis);
             if (dis > disToLayer1 && dis < disToLayer2)
             {
                 int rnd = Random.Range(0, firstLayer.Length);

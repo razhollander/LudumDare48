@@ -223,7 +223,7 @@ Transform:
   m_GameObject: {fileID: 5478650283306138383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.025115753, y: 0.025115753, z: 0.025115753}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
   - {fileID: 6151462325083136105}
   - {fileID: 7581938720813620533}
@@ -253,6 +253,7 @@ MonoBehaviour:
   _foodCrumbSpriteRenderer: {fileID: 1713254581558678281}
   _bloodParticle: {fileID: 5709106631390141873}
   _isMoving: 0
+  _damage: 5
 --- !u!212 &6071654042279241216
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -314,8 +315,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20.48, y: 20.48, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 14.18786, y: 8.702389, z: 0.20000002}
+  m_Center: {x: 0.67223966, y: -0.8873564, z: 0}
 --- !u!114 &1531989670206220076
 MonoBehaviour:
   m_ObjectHideFlags: 0

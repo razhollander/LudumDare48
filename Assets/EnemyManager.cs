@@ -7,7 +7,10 @@ public class EnemyManager : MonoBehaviour
 {
     public float time;
     
-    [SerializeField] EnemyScript enemy1, enemy2, enemy3;
+   // [SerializeField] EnemyScript enemy1, enemy2, enemy3;
+    public EnemyScript[] firstWave, secondWave, thirdWave;
+    [SerializeField] float timeToWave1, timeToWave2, timeToWave3;
+
 
     [SerializeField]Vector2 centerL, sizeR;
     [SerializeField]Vector2 centerR, sizeL;
@@ -37,22 +40,45 @@ public class EnemyManager : MonoBehaviour
             float rndNum = Random.Range(0f, 1f);
             if (rndNum <= curveTime)
             {
-                int enemyNum = Random.Range(1, 4);
-
                 EnemyScript enemy;
 
-                switch (enemyNum)
+                if (curveTime < timeToWave1)
                 {
-                    case 1:
-                        enemy = enemy1.Get<EnemyScript>();
-                        break;
-                    case 2:
-                        enemy = enemy2.Get<EnemyScript>();
-                        break;
-                    default:
-                        enemy = enemy3.Get<EnemyScript>();
-                        break;
+                    Debug.Log("wave 1");
+                    int rnd = Random.Range(0, firstWave.Length);
+                    enemy = firstWave[rnd].Get<EnemyScript>();
                 }
+
+                else if (curveTime < timeToWave2 && curveTime > timeToWave1)
+                {
+                    Debug.Log("wave 2");
+                    int rnd = Random.Range(0, secondWave.Length);
+                    enemy = secondWave[rnd].Get<EnemyScript>();
+                }
+
+                else
+                {
+                    Debug.Log("wave 3");
+                    int rnd = Random.Range(0, thirdWave.Length);
+                    enemy = thirdWave[rnd].Get<EnemyScript>();
+                }
+
+                //int enemyNum = Random.Range(1, 4);
+
+                //EnemyScript enemy;
+
+                //switch (enemyNum)
+                //{
+                //    case 1:
+                //        enemy = enemy1.Get<EnemyScript>();
+                //        break;
+                //    case 2:
+                //        enemy = enemy2.Get<EnemyScript>();
+                //        break;
+                //    default:
+                //        enemy = enemy3.Get<EnemyScript>();
+                //        break;
+                //}
                    Vector2 posL = centerL + new Vector2(Random.Range(-sizeR.x/2, sizeR.x/2), Random.Range(-sizeR.y / 2, sizeR.y / 2));
                    Vector2 posR = centerR + new Vector2(Random.Range(-sizeL.x / 2, sizeL.x / 2), Random.Range(-sizeL.y / 2, sizeL.y / 2));
 
