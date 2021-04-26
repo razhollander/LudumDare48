@@ -12,7 +12,7 @@ public class QueenScript : MonoBehaviour
     private float health;
     public float startHealth; 
     private Transform _transform;
-    public UIScript UI;
+    private UIScript UI;
     SoundManager soundManager;
     Animator animator;
     public GameObject gameOver;
@@ -30,6 +30,10 @@ public class QueenScript : MonoBehaviour
         UI.UpdatehealthTxt(damage);
         Die();
 
+    }
+    private void Start()
+    {
+        UI = GameManager.instance.UIScript;
     }
 
     public void Die()
@@ -80,28 +84,22 @@ public class QueenScript : MonoBehaviour
     private void CreateAnt()
     {
         foodAmount -= FoodAmountPerAnt;
-        UI.UpdateFoodTxt(-FoodAmountPerAnt);
         Vector2 creationPoint = _transform.position.ToVector2_Y() + Random.insideUnitCircle * createAntsRadius;
-        GameManager.instance.antManager.AddAnt(creationPoint);
-        UI.UpdateAntsTxt(1);
+        GameManager.instance.antManager.AddAnt(creationPoint);       
     }
 
     private void CreateFastAnt()
     {
         foodAmount -= FoodAmountPerAnt;
-        UI.UpdateFoodTxt(-FoodAmountPerAnt);
         Vector2 creationPoint = _transform.position.ToVector2_Y() + Random.insideUnitCircle * createAntsRadius;
         GameManager.instance.antManager.AddFastAnt(creationPoint);
-        UI.UpdateAntsTxt(1);
     }
 
     private void CreateBigAnt()
     {
         foodAmount -= FoodAmountPerAnt;
-        UI.UpdateFoodTxt(-FoodAmountPerAnt);
         Vector2 creationPoint = _transform.position.ToVector2_Y() + Random.insideUnitCircle * createAntsRadius;
         GameManager.instance.antManager.AddBigAnt(creationPoint);
-        UI.UpdateAntsTxt(1);
     }
 
 }

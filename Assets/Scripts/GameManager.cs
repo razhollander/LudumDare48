@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject queen;
     public AntsManager antManager;
     [SerializeField] global_selection selectionManager;
+    public UIScript UIScript;
     float _prevTimeScale = 1;
     GameState gameState = GameState.MenuScreen;
     //public ants manager
@@ -22,6 +23,10 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         PauseGame();
+    }
+    private void OnEnable()
+    {
+        instance = this;
     }
 
     public void PlayGame()
