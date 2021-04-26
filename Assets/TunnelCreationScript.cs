@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TunnelCreationScript : MonoBehaviour
+public class TunnelCreationScript : OverridableMonoBehaviour
 {
     public GameObject tunnelPrefab;
     public GameObject currentLine;
@@ -15,19 +15,23 @@ public class TunnelCreationScript : MonoBehaviour
     Transform holder;
     public bool dig = false;
     public Transform digPoint;
-    [SerializeField]float time = 0.1f;
+    [SerializeField] float diggingDelta=0.1f;
+    float time = 0.1f;
+    [SerializeField] bool isSingleLine = false;
     void Start()
     {
         _lr = tunnelPrefab.GetComponent<LineRenderer>();
         holder = GameObject.FindGameObjectWithTag("TunnelHolder").transform;
+        time = diggingDelta;
     }
 
-    private void OnDisable()
+    protected override void OnDisable()
     {
+        base.OnDisable();
         _flag = true;
     }
 
-    void Update()
+    public override void UpdateMe()
     {
         if (dig && _flag)
         {
@@ -40,8 +44,15 @@ public class TunnelCreationScript : MonoBehaviour
             time -= Time.deltaTime;
             if (time <= 0)
             {
-                UpdateLine(digPoint.position);
-                time = 0.1f;
+                if (!isSingleLine)
+                {
+                    AddPoint(digPoint.position);
+                }
+                else
+                {
+                    UpdateLastPoint(digPoint.position);
+                }
+                time = diggingDelta;
             }
         }
     }
@@ -58,10 +69,16 @@ public class TunnelCreationScript : MonoBehaviour
         _lr.SetPosition(1,positions[1]);
     }
 
-    public void UpdateLine(Vector2 newPos)
+    public void AddPoint(Vector2 newPos)
     {
         positions.Add(newPos);
         _lr.positionCount++;
+        _lr.SetPosition(_lr.positionCount - 1, newPos);
+    }
+
+    public void UpdateLastPoint(Vector2 newPos)
+    {
+        positions[positions.Count - 1] = newPos;
         _lr.SetPosition(_lr.positionCount - 1, newPos);
     }
 }

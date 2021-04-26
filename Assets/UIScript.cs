@@ -20,6 +20,8 @@ public class UIScript : MonoBehaviour
         queen = FindObjectOfType<QueenScript>();
         startHealth = queen.startHealth;
         health = startHealth;
+
+        PlayerPrefs.SetInt("Score",0);
     }
 
     public void UpdateAntsTxt(int number)
@@ -32,6 +34,10 @@ public class UIScript : MonoBehaviour
     {       
         food += number;
         foodTxt.text = food.ToString();
+        if (food >= PlayerPrefs.GetInt("Score"))
+        {
+            PlayerPrefs.SetInt("Score", food);
+        }
     }
 
     public void UpdatehealthTxt(float number)
