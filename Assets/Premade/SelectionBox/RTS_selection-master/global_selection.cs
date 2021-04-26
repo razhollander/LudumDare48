@@ -40,6 +40,11 @@ public class global_selection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(1))
+        {
+            selected_table.deselectAll();
+        }
+
         //1. when left mouse button clicked (but not released)
         if (Input.GetMouseButtonDown(0))
         {

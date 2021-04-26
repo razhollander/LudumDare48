@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    Cinemachine.CinemachineVirtualCamera cvc;
     public static GameManager instance;
     public GameObject queen;
     public AntsManager antManager;
-
+    [SerializeField] global_selection selectionManager;
     float _prevTimeScale = 1;
     GameState gameState = GameState.MenuScreen;
     //public ants manager
@@ -23,8 +25,12 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
-        if(gameState == GameState.GameScreen)
+        if (gameState == GameState.GameScreen)
+        {
+            cvc.enabled = true;
             Time.timeScale = _prevTimeScale;
+            selectionManager.enabled = true;
+        }
     }
 
     public void SetMenuScreenGameState()
@@ -40,6 +46,8 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         _prevTimeScale = Time.timeScale;
+        cvc.enabled = false;
+        selectionManager.enabled = false;
         Time.timeScale = 0;
     }
 
