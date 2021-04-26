@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TunnelCreationScript : MonoBehaviour
+public class TunnelCreationScript : OverridableMonoBehaviour
 {
     public GameObject tunnelPrefab;
     public GameObject currentLine;
@@ -15,19 +15,21 @@ public class TunnelCreationScript : MonoBehaviour
     Transform holder;
     public bool dig = false;
     public Transform digPoint;
-    [SerializeField]float time = 0.1f;
+    [SerializeField]float time = 0.15f;
+    [SerializeField] bool isSingleLine = false;
     void Start()
     {
         _lr = tunnelPrefab.GetComponent<LineRenderer>();
         holder = GameObject.FindGameObjectWithTag("TunnelHolder").transform;
     }
 
-    private void OnDisable()
+    protected override void OnDisable()
     {
+        base.OnDisable();
         _flag = true;
     }
 
-    void Update()
+    public override void UpdateMe()
     {
         if (dig && _flag)
         {
@@ -40,7 +42,14 @@ public class TunnelCreationScript : MonoBehaviour
             time -= Time.deltaTime;
             if (time <= 0)
             {
-                UpdateLine(digPoint.position);
+                if (!isSingleLine)
+                {
+                    AddPoint(digPoint.position);
+                }
+                else
+                {
+
+                }
                 time = 0.1f;
             }
         }
@@ -58,7 +67,14 @@ public class TunnelCreationScript : MonoBehaviour
         _lr.SetPosition(1,positions[1]);
     }
 
-    public void UpdateLine(Vector2 newPos)
+    public void AddPoint(Vector2 newPos)
+    {
+        positions.Add(newPos);
+        _lr.positionCount++;
+        _lr.SetPosition(_lr.positionCount - 1, newPos);
+    }
+
+    public void UpdateLastPoint(Vector2 newPos)
     {
         positions.Add(newPos);
         _lr.positionCount++;
