@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: d46f76396ace9bb47b9044729a5b3205
+guid: a3637953085b0f244aeb634bd7af1253
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8020143640844766479
-    second: spritesheet_0
+      213: -1864444170394067083
+    second: queen sprite sheet_0
   - first:
-      213: -6251682230944352461
-    second: spritesheet_1
+      213: 6278421240337188121
+    second: queen sprite sheet_1
   - first:
-      213: -1259408508766424310
-    second: spritesheet_2
+      213: 6258045121659156590
+    second: queen sprite sheet_2
   - first:
-      213: -5962389079421231736
-    second: spritesheet_3
+      213: -6339651171350057376
+    second: queen sprite sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -147,7 +147,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet_0
+      name: queen sprite sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0d092816264d4f60800000000000000
-      internalID: 8020143640844766479
+      spriteID: 57f1d10c7e92026e0800000000000000
+      internalID: -1864444170394067083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_1
+      name: queen sprite sheet_1
       rect:
         serializedVersion: 2
         x: 2048
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 337b0ff32209d39a0800000000000000
-      internalID: -6251682230944352461
+      spriteID: 915c0948ade612750800000000000000
+      internalID: 6278421240337188121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_2
+      name: queen sprite sheet_2
       rect:
         serializedVersion: 2
         x: 0
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a037fd742aea58ee0800000000000000
-      internalID: -1259408508766424310
+      spriteID: e683cd0b1ea09d650800000000000000
+      internalID: 6258045121659156590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_3
+      name: queen sprite sheet_3
       rect:
         serializedVersion: 2
         x: 2048
@@ -224,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88ddd6ce8b6514da0800000000000000
-      internalID: -5962389079421231736
+      spriteID: 06e6acb39d80508a0800000000000000
+      internalID: -6339651171350057376
       vertices: []
       indices: 
       edges: []
@@ -233,7 +233,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: f527cb7dae98ce54582404fe78dc135e
     internalID: 0
     vertices: []
     indices: 

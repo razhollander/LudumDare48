@@ -554,6 +554,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOver
       objectReference: {fileID: 0}
+    - target: {fileID: 6754267325713178301, guid: d6fafd37f0328cf49898aa9dee6d7239,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6fafd37f0328cf49898aa9dee6d7239, type: 3}
 --- !u!1 &189038408 stripped
@@ -1695,12 +1700,12 @@ PrefabInstance:
     - target: {fileID: 7115329626046076378, guid: 6f4bb5e9d7a82a04f8ad89805e5cf280,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 59
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 7115329626046076378, guid: 6f4bb5e9d7a82a04f8ad89805e5cf280,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1315.8389
+      value: 707.58496
       objectReference: {fileID: 0}
     - target: {fileID: 7156518116010281158, guid: 6f4bb5e9d7a82a04f8ad89805e5cf280,
         type: 3}
@@ -3506,6 +3511,12 @@ PrefabInstance:
       propertyPath: createAntsRadius
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1267055713942076938, guid: f4014e87e0d0b5144aebe437859bd6f2,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6278421240337188121, guid: a3637953085b0f244aeb634bd7af1253,
+        type: 3}
     - target: {fileID: 4592197104961178010, guid: f4014e87e0d0b5144aebe437859bd6f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3596,6 +3607,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 827476505}
+    - target: {fileID: 4235481661128162125, guid: 7af77c2192de85a40988269890a8c433,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 29e4151b14073cf46a9b9837cb229cd5,
+        type: 3}
+    - target: {fileID: 4235481661128162125, guid: 7af77c2192de85a40988269890a8c433,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4669512376114543404, guid: 7af77c2192de85a40988269890a8c433,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3691,6 +3713,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 827476505}
+    - target: {fileID: 8982013685951601832, guid: 7af77c2192de85a40988269890a8c433,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 11fca9c3feae5e5408f979595903fbe5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7af77c2192de85a40988269890a8c433, type: 3}
 --- !u!1001 &7527364675840642438
@@ -3743,7 +3771,7 @@ PrefabInstance:
     - target: {fileID: 7527364674131339792, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.2391152
+      value: -2.2391114
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674131339792, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
@@ -3803,12 +3831,12 @@ PrefabInstance:
     - target: {fileID: 7527364674809075362, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01354599
+      value: 0.013546944
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674809075362, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3484788
+      value: 2.348475
       objectReference: {fileID: 0}
     - target: {fileID: 7527364674809075363, guid: 7a189909b40f88e4caf5d03b9cb8d7e8,
         type: 3}
