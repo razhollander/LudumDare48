@@ -35,6 +35,7 @@ public class EnemyScript : OverridableMonoBehaviour
         health = startHealth;
         HealthBar.fillAmount = health / startHealth;
         _healthCanvas.gameObject.SetActive(false);
+        hit = false;
     }
 
     public void UnHit()
