@@ -339,7 +339,8 @@ MonoBehaviour:
   positions: []
   dig: 0
   digPoint: {fileID: 7581938720813620533}
-  time: 0.2
+  diggingDelta: 0.2
+  isSingleLine: 0
 --- !u!95 &287424281443883869
 Animator:
   serializedVersion: 3

@@ -266,6 +266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d790c35c5edc6a945a559b701ff40fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialPoolSize: 10
+  updateWhenDisabled: 0
   tunnelPrefab: {fileID: 6576218313410826406, guid: 75869e6919470cf44a4db27bc7d92f84,
     type: 3}
   currentLine: {fileID: 0}
@@ -274,7 +276,8 @@ MonoBehaviour:
   positions: []
   dig: 1
   digPoint: {fileID: 69113272368468660}
-  time: 0.1
+  diggingDelta: 0.1
+  isSingleLine: 1
 --- !u!54 &1717251173089799127
 Rigidbody:
   m_ObjectHideFlags: 0

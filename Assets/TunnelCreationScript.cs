@@ -15,12 +15,14 @@ public class TunnelCreationScript : OverridableMonoBehaviour
     Transform holder;
     public bool dig = false;
     public Transform digPoint;
-    [SerializeField]float time = 0.15f;
+    [SerializeField] float diggingDelta=0.1f;
+    float time = 0.1f;
     [SerializeField] bool isSingleLine = false;
     void Start()
     {
         _lr = tunnelPrefab.GetComponent<LineRenderer>();
         holder = GameObject.FindGameObjectWithTag("TunnelHolder").transform;
+        time = diggingDelta;
     }
 
     protected override void OnDisable()
@@ -48,9 +50,9 @@ public class TunnelCreationScript : OverridableMonoBehaviour
                 }
                 else
                 {
-
+                    UpdateLastPoint(digPoint.position);
                 }
-                time = 0.1f;
+                time = diggingDelta;
             }
         }
     }
@@ -76,8 +78,7 @@ public class TunnelCreationScript : OverridableMonoBehaviour
 
     public void UpdateLastPoint(Vector2 newPos)
     {
-        positions.Add(newPos);
-        _lr.positionCount++;
+        positions[positions.Count - 1] = newPos;
         _lr.SetPosition(_lr.positionCount - 1, newPos);
     }
 }
